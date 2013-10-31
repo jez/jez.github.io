@@ -53,6 +53,7 @@ html, body {
 }
 
 body {
+  background-color: #666;
   background-image: url(/assets/img/pittsburgh-skyline.jpg);
   background-repeat: repeat-x;
   background-position: 50% 20%;
