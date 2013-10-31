@@ -92,9 +92,26 @@ body {
 footer {
   padding-top: 15px;
   padding-bottom: 5px;
-  background-color: #F5F5F5;
+  color: #ddd;
+  background-color: #303030;
 }
 
 h1 {
   font-family: "Electrolize", sans-serif;
+}
+
+@media (max-width: 767px) {
+  body {
+    background-height: 50%;
+  }
+  .jumbotron {
+    margin-top: 50px;
+  }
+  .jumbotron-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  footer {
+    height: 70px;
+  }
 }
