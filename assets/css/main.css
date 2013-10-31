@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Electrolize);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 /* ==========================================================================
    Author's custom styles
@@ -20,27 +21,42 @@
   padding-bottom: 20px;
 }
 
-.jumbotron a {
+a {
   color: #ddd;
 }
 
-a:hover {
-  color: white;
-}
-.hover-blue a:hover {
+.blue {
   color: rgb(111, 168, 220);
 }
-.hover-red a:hover {
+.red {
   color: rgb(224, 102, 102);
 }
-.hover-purple a:hover {
+.purple {
   color: rgb(142, 124, 195);
 }
-.hover-green a:hover {
+.green {
   color: rgb(147, 195, 125);
 }
-.hover-yellow a:hover {
+.yellow {
   color: rgb(255, 217, 102);
+}
+.link-blue a {
+  color: rgb(111, 168, 220);
+}
+.link-red a {
+  color: rgb(224, 102, 102);
+}
+.link-purple a {
+  color: rgb(142, 124, 195);
+}
+.link-green a {
+  color: rgb(147, 195, 125);
+}
+.link-yellow a {
+  color: rgb(255, 217, 102);
+}
+a:hover {
+  color: white;
 }
 
 /* ==========================================================================
@@ -54,9 +70,10 @@ html, body {
 
 body {
   background-color: #666;
-  background-image: url(/assets/img/pittsburgh-skyline.jpg);
+  background-image: url(/assets/img/pittsburgh-skyline.png);
   background-repeat: repeat-x;
   background-position: 50% 20%;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Wrapper for page content to push down footer */
