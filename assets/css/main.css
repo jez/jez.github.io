@@ -5,16 +5,42 @@
    ========================================================================== */
 
 .jumbotron {
-    background-color: #666;
-    color: white;
+  margin-top: 150px;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  height: 200%;
+}
+
+.jumbotron-header {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.jumbotron-header h1 {
+  padding-bottom: 20px;
 }
 
 .jumbotron a {
   color: #ddd;
 }
 
-.jumbotron a:hover {
+a:hover {
   color: white;
+}
+.hover-blue a:hover {
+  color: rgb(111, 168, 220);
+}
+.hover-red a:hover {
+  color: rgb(224, 102, 102);
+}
+.hover-purple a:hover {
+  color: rgb(142, 124, 195);
+}
+.hover-green a:hover {
+  color: rgb(147, 195, 125);
+}
+.hover-yellow a:hover {
+  color: rgb(255, 217, 102);
 }
 
 /* ==========================================================================
@@ -24,6 +50,12 @@
 html, body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
+}
+
+body {
+  background-image: url(/assets/img/pittsburgh-skyline.png);
+  background-repeat: repeat-x;
+  background-position: 50% 20%;
 }
 
 /* Wrapper for page content to push down footer */
