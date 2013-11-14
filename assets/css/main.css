@@ -5,59 +5,19 @@
    Author's custom styles
    ========================================================================== */
 
-.jumbotron {
-  margin-top: 150px;
-  background-color: rgba(0, 0, 0, .8);
-  color: white;
-  height: 200%;
-}
+a { color: #ddd; }
 
-.jumbotron-header {
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-
-.jumbotron-header h1 {
-  padding-bottom: 20px;
-}
-
-a {
-  color: #ddd;
-}
-
-.blue {
-  color: rgb(111, 168, 220);
-}
-.red {
-  color: rgb(224, 102, 102);
-}
-.purple {
-  color: rgb(142, 124, 195);
-}
-.green {
-  color: rgb(147, 195, 125);
-}
-.yellow {
-  color: rgb(255, 217, 102);
-}
-.link-blue a {
-  color: rgb(111, 168, 220);
-}
-.link-red a {
-  color: rgb(224, 102, 102);
-}
-.link-purple a {
-  color: rgb(142, 124, 195);
-}
-.link-green a {
-  color: rgb(147, 195, 125);
-}
-.link-yellow a {
-  color: rgb(255, 217, 102);
-}
-a:hover {
-  color: white;
-}
+.blue { color: rgb(111, 168, 220); }
+.red { color: rgb(224, 102, 102); }
+.purple { color: rgb(142, 124, 195); }
+.green { color: rgb(147, 195, 125); }
+.yellow { color: rgb(255, 217, 102); }
+.link-blue a { color: rgb(111, 168, 220); }
+.link-red a { color: rgb(224, 102, 102); }
+.link-purple a { color: rgb(142, 124, 195); }
+.link-green a { color: rgb(147, 195, 125); }
+.link-yellow a { color: rgb(255, 217, 102); }
+a:hover { color: white; }
 
 /* ==========================================================================
  * sticky nav
@@ -69,49 +29,52 @@ html, body {
 }
 
 body {
-  background-color: #666;
+  background-color: #606060;
   background-image: url(/assets/img/pittsburgh-skyline.png);
   background-repeat: repeat-x;
-  background-position: 50% 20%;
+  background-position: center;
+  background-size: cover;
   font-family: "Open Sans", sans-serif;
-}
-
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* Negative indent footer by it's height */
-  margin: 0 auto -40px;
-}
-
-/* Set the fixed height of the footer here */
-#push, footer {
-  height: 40px;
-}
-footer {
-  padding-top: 15px;
-  padding-bottom: 5px;
-  color: #ddd;
-  background-color: #303030;
 }
 
 h1 {
   font-family: "Electrolize", sans-serif;
 }
 
+.jumbotron {
+  position: absolute;
+  top: 13%;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  width: 100%;
+}
+
+.jumbotron-header {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.jumbotron-header h1 {
+  padding-bottom: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgba(48,48,48,.5);
+  padding-top: 10px;
+  padding-bottom: 2px;
+  color: #999;
+}
+
 @media (max-width: 767px) {
-  body {
-    background-height: 50%;
-  }
   .jumbotron {
+    top: 3%;
     margin-top: 50px;
   }
   .jumbotron-header {
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-  footer {
-    height: 70px;
   }
 }
