@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <title>Galumphing Banderwoozles</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      .blue {
+        background-color: #3c78d8;
+      }
+      .green {
+        background-color: #6aa84f;
+      }
+      .red {
+        background-color: #e06666;
+      }
+      div:not(#div-wrapper) {
+        height: 60px;
+        width: 60px;
+        border: 2px solid #333;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        margin: 4px;
+      }
+      h1 {
+        color: white;
+        display: inline-block;
+        padding: 0 20px;
+        font-family: Menlo, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="number" name="rows" placeholder="Number of rows?">
+      <input type="number" name="cols" placeholder="Number of cols?">
+      <button>Play!</button>
+    </form>
+    <h1 id="reds" class="red">0</h1>
+    <h1 id="greens" class="green">0</h1>
+    <h1 id="blues" class="blue">0</h1>
+    <div id="div-wrapper">
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      var rows;
+      var cols;
+      var divs;
+      var reds = 0;
+      var blues = 0;
+      var greens = 0;
+      function move(e) {
+        var r = $(e.currentTarget).data('row');
+        var c = $(e.currentTarget).data('col');
+        var color = $(e.currentTarget).data('color');
+        var $up = $('#' + (r - 1) + '-' + c);
+        console.log($up);
+        var $down = $('#' + (r + 1) + '-' + c);
+        console.log($down);
+        var $left = $('#' + r + '-' + (c - 1));
+        console.log($left);
+        var $right = $('#' + r + '-' + (c + 1));
+        console.log($right);
+        var $neighbors = [$up, $down, $left, $right];
+        if(color == 'green') {
+          $(e.currentTarget).toggleClass('green red').data('color', 'red');
+          reds++;
+          greens--;
+          $neighbors.forEach(function($elem, i, array) {
+            console.log($elem[0]);
+            if($elem[0]) {
+              console.log($elem.data('color'));
+              if($elem.data('color') == 'green') {
+                $elem.toggleClass('green blue').data('color', 'blue');
+                if(greens > 0) { greens--; }
+                blues++;
+                } else if($elem.data('color') == 'blue') {
+                $elem.toggleClass('blue green').data('color', 'green');
+                if (blues > 0 ) { blues--; }
+                console.log('blue: ' + blues)
+                greens++;
+              }
+            }
+          });
+          $('#reds').html(reds);
+          $('#blues').html(blues);
+          $('#greens').html(greens);
+        }
+      }
+      function play(e) {
+        e.preventDefault();
+        rows = $('form input[name="rows"]').val();
+        cols = $('form input[name="cols"]').val();
+        $('form').detach();
+        for(var r = 0; r < rows; r++) {
+          for(var c = 0; c < cols; c++) {
+            $('#div-wrapper').append('<div id="' + r + '-' + c + '"></div>');
+            $('#' + r + '-' + c).addClass('blue').data({row: r, col: c, color: 'blue'}).click(move);
+          }
+          $('#div-wrapper').append('<br>');
+        }
+        $('#0-0').removeClass('blue').addClass('green').data('color', 'green');
+        greens = 1;
+        blues = rows * cols - 1;
+        $('#blues').html(blues);
+        $('#greens').html(greens);
+      }
+
+      $(document).ready(function() {
+        $('button').click(play);
+      });
+    </script>
+  </body>
+</html>
