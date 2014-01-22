@@ -85,6 +85,10 @@
           $('#reds').html(reds);
           $('#blues').html(blues);
           $('#greens').html(greens);
+          if(greens == 0) {
+            alert("You're pretty bad at this game. This board was winnable.");
+            location.reload();
+          }
           if(reds == total) {
             alert("Horray! You're such a champ. Keep it up.");
             location.reload();
