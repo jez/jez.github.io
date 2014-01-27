@@ -48,12 +48,48 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
       $(document).ready(function() {
-        $('#b1').click(function(e) { $('#s1').toggleClass('blue red'); $('#s2').toggleClass('blue red'); $('#s4').toggleClass('blue red'); $('#s5').toggleClass('blue red'); });
-        $('#b2').click(function(e) { $('#s2').toggleClass('blue red'); $('#s3').toggleClass('blue red'); $('#s4').toggleClass('blue red'); $('#s6').toggleClass('blue red'); });
-        $('#b3').click(function(e) { $('#s4').toggleClass('blue red'); $('#s5').toggleClass('blue red'); $('#s6').toggleClass('blue red'); $('#s7').toggleClass('blue red'); });
-        $('#b4').click(function(e) { $('#s1').removeClass('blue').addClass('red'); $('#s2').removeClass('blue').addClass('red'); $('#s4').removeClass('blue').addClass('red'); $('#s5').removeClass('blue').addClass('red'); });
-        $('#b5').click(function(e) { $('#s2').removeClass('blue').addClass('red'); $('#s3').removeClass('blue').addClass('red'); $('#s4').removeClass('blue').addClass('red'); $('#s6').removeClass('blue').addClass('red'); });
-        $('#b6').click(function(e) { $('#s4').removeClass('blue').addClass('red'); $('#s5').removeClass('blue').addClass('red'); $('#s6').removeClass('blue').addClass('red'); $('#s7').removeClass('blue').addClass('red'); });
+        $('#b1').click(function(e) { 
+          $('#s1').toggleClass('blue red');
+          $('#s2').toggleClass('blue red');
+          $('#s4').toggleClass('blue red');
+          $('#s5').toggleClass('blue red');
+          console.log('flipped orange');
+        });
+        $('#b2').click(function(e) { 
+          $('#s2').toggleClass('blue red');
+          $('#s3').toggleClass('blue red');
+          $('#s4').toggleClass('blue red');
+          $('#s6').toggleClass('blue red');
+          console.log('flipped green');
+        });
+        $('#b3').click(function(e) { 
+          $('#s4').toggleClass('blue red');
+          $('#s5').toggleClass('blue red');
+          $('#s6').toggleClass('blue red');
+          $('#s7').toggleClass('blue red');
+          console.log('flipped purple');
+        });
+        $('#b4').click(function(e) { 
+          $('#s1').removeClass('blue').addClass('red');
+          $('#s2').removeClass('blue').addClass('red');
+          $('#s4').removeClass('blue').addClass('red');
+          $('#s5').removeClass('blue').addClass('red');
+          console.log('reset orange');
+        });
+        $('#b5').click(function(e) { 
+          $('#s2').removeClass('blue').addClass('red');
+          $('#s3').removeClass('blue').addClass('red');
+          $('#s4').removeClass('blue').addClass('red');
+          $('#s6').removeClass('blue').addClass('red');
+          console.log('reset green');
+        });
+        $('#b6').click(function(e) { 
+          $('#s4').removeClass('blue').addClass('red');
+          $('#s5').removeClass('blue').addClass('red');
+          $('#s6').removeClass('blue').addClass('red');
+          $('#s7').removeClass('blue').addClass('red');
+          console.log('reset purple');
+        });
         $('.button.orange').hover(function(e) {
           $('.circle.orange').css('background-color', '#fce5cd');
           $('.circle.orange').css('z-index', '-1');
