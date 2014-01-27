@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Song of Orbits</title>
+    <style>
+      table {
+        margin: 0 auto;
+      }
+      .col {
+        float: left;
+        width: 50%;
+      }
+      .bar {
+        height: 50px;
+        width: 0px;
+      }
+      .negative {
+        background-color: #e06666;
+        float: right;
+        clear: both;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      .positive {
+        background-color: #6aa84f;
+        float: left;
+        clear: both;
+        border-bottom: 1px solid black;
+      }
+      #step {
+        width: 50px;
+        margin: 0 auto;
+        display: block;
+      }
+      p { font-family: sans-serif; }
+    </style>
+  </head>
+  <body>
+    <table border="0">
+      <tr>
+        <td><input type="number" name="fam1" placeholder="Family 1?"></td>
+        <td><input type="number" name="fam2" placeholder="Family 2?"></td>
+        <td><input type="number" name="fam3" placeholder="Family 3?"></td>
+      </tr>
+      <tr>
+        <td><input type="number" name="fam4" placeholder="Family 4?"></td>
+        <td><input type="number" name="fam5" placeholder="Family 5?"></td>
+        <td><button id="play">Play!</button></td>
+      </tr>
+    </table>
+    <div class="col">
+      <div class="fam1 bar negative"></div>
+      <div class="fam2 bar negative"></div>
+      <div class="fam3 bar negative"></div>
+      <div class="fam4 bar negative"></div>
+      <div class="fam5 bar negative"></div>
+    </div>
+    <div id="col2" class="col">
+      <div class="fam1 bar positive"></div>
+      <div class="fam2 bar positive"></div>
+      <div class="fam3 bar positive"></div>
+      <div class="fam4 bar positive"></div>
+      <div class="fam5 bar positive"></div>
+    </div>
+    <button id="step">Step</button>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      var values = [];
+      function setWidth(family, value) {
+        if(value === 0) {
+          $('.' + family).css('width', 0);
+        } else if (value > 0) {
+          $('.' + family + '.positive').css('width', value * 20);
+          $('.' + family + '.negative').css('width', 0);
+        } else {
+          $('.' + family + '.negative').css('width', Math.abs(value * 20));
+          $('.' + family + '.positive').css('width', 0);
+        }
+      }
+      function step(e) {
+        for(var i = 0; i < values.length; i++) {
+          if(values[i] < 0) {
+            values[i] = - values[i];
+            values[(i + 4) % 5] -= values[i];
+            values[(i + 1) % 5] -= values[i];
+            break;
+          }
+        }
+        setWidth('fam1', values[0]);
+        setWidth('fam2', values[1]);
+        setWidth('fam3', values[2]);
+        setWidth('fam4', values[3]);
+        setWidth('fam5', values[4]);
+      }
+      function play(e) {
+        e.preventDefault();
+        values.push($('input[name="fam1"]').val());
+        values.push($('input[name="fam2"]').val());
+        values.push($('input[name="fam3"]').val());
+        values.push($('input[name="fam4"]').val());
+        values.push($('input[name="fam5"]').val());
+        $('table').detach();
+        step();
+        $('#step').click(step);
+      }
+      $(document).ready(function() {
+        function sum(arr) {
+          var result = 0;
+          for(var i = 0; i < arr.length; i++) { result += arr[i].value; }
+          return result;
+        }
+        do {
+          var initials = [];
+          for(var i = 0; i < 5; i++) {
+            initials.push({index: i, value: Math.floor(Math.random() * 41) - 20});
+          }
+          console.log(sum(initials));
+        } while(sum(initials) < 0);
+        initials.map(function(elem) {
+          $('input[name="fam' + (elem.index + 1) + '"]').val(elem.value);
+        });
+        $('#play').click(play);
+      })
+    </script>
+  </body>
+</html>
