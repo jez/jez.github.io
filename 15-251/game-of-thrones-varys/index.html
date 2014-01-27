@@ -48,6 +48,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
       $(document).ready(function() {
+        $('stone').click(function(e) {
+          $(e.currentTarget).toggleClass('blue red');
+        });
         $('#b1').click(function(e) { 
           $('#s1').toggleClass('blue red');
           $('#s2').toggleClass('blue red');
