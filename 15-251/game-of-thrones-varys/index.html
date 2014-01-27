@@ -9,6 +9,7 @@
       .purple.button { background-color: #674ea7; }
       .button { width: 120px; padding: 10px 0px; text-align: center; border-radius: 3px; font-family: sans-serif; color: #ddd; }
       .button:hover { color: white; font-weight: bold; cursor: pointer; }
+      .orange.button:hover ~ .orange.circle { background-color: ; }
       #circle-wrapper { width: 300px; margin: 30px auto; position: relative; }
       .orange.circle { border: 4px solid #e69138; }
       .green.circle { border: 4px solid #6aa84f; }
@@ -48,11 +49,32 @@
     <script>
       $(document).ready(function() {
         $('#b1').click(function(e) { $('#s1').toggleClass('blue red'); $('#s2').toggleClass('blue red'); $('#s4').toggleClass('blue red'); $('#s5').toggleClass('blue red'); });
-        $('#b2').click(function(e) { $('#s2').toggleClass('blue red'); $('#s3').toggleClass('blue red'); $('#s4').toggleClass('blue red'); $('#s5').toggleClass('blue red'); });
+        $('#b2').click(function(e) { $('#s2').toggleClass('blue red'); $('#s3').toggleClass('blue red'); $('#s4').toggleClass('blue red'); $('#s6').toggleClass('blue red'); });
         $('#b3').click(function(e) { $('#s4').toggleClass('blue red'); $('#s5').toggleClass('blue red'); $('#s6').toggleClass('blue red'); $('#s7').toggleClass('blue red'); });
         $('#b4').click(function(e) { $('#s1').removeClass('blue').addClass('red'); $('#s2').removeClass('blue').addClass('red'); $('#s4').removeClass('blue').addClass('red'); $('#s5').removeClass('blue').addClass('red'); });
-        $('#b5').click(function(e) { $('#s2').removeClass('blue').addClass('red'); $('#s3').removeClass('blue').addClass('red'); $('#s4').removeClass('blue').addClass('red'); $('#s5').removeClass('blue').addClass('red'); });
+        $('#b5').click(function(e) { $('#s2').removeClass('blue').addClass('red'); $('#s3').removeClass('blue').addClass('red'); $('#s4').removeClass('blue').addClass('red'); $('#s6').removeClass('blue').addClass('red'); });
         $('#b6').click(function(e) { $('#s4').removeClass('blue').addClass('red'); $('#s5').removeClass('blue').addClass('red'); $('#s6').removeClass('blue').addClass('red'); $('#s7').removeClass('blue').addClass('red'); });
+        $('.button.orange').hover(function(e) {
+          $('.circle.orange').css('background-color', '#fce5cd');
+          $('.circle.orange').css('z-index', '-1');
+        }, function(e) {
+          $('.circle.orange').css('background', 'none');
+          $('.circle.orange').css('z-index', '0');
+        });
+        $('.button.green').hover(function(e) {
+          $('.circle.green').css('background-color', '#d9ead3');
+          $('.circle.green').css('z-index', '-1');
+        }, function(e) {
+          $('.circle.green').css('background', 'none');
+          $('.circle.green').css('z-index', '0');
+        });
+        $('.button.purple').hover(function(e) {
+          $('.circle.purple').css('background-color', '#d9d2e9');
+          $('.circle.purple').css('z-index', '-1');
+        }, function(e) {
+          $('.circle.purple').css('background', 'none');
+          $('.circle.purple').css('z-index', '0');
+        });
       });
     </script>
   </body>
