@@ -45,18 +45,20 @@
     </style>
   </head>
   <body>
-    <table id="form" border="0">
-      <tr>
-        <td><input type="number" name="fam1" placeholder="Family 1?"></td>
-        <td><input type="number" name="fam2" placeholder="Family 2?"></td>
-        <td><input type="number" name="fam3" placeholder="Family 3?"></td>
-      </tr>
-      <tr>
-        <td><input type="number" name="fam4" placeholder="Family 4?"></td>
-        <td><input type="number" name="fam5" placeholder="Family 5?"></td>
-        <td><button id="play">Play!</button></td>
-      </tr>
-    </table>
+    <form id="play">
+      <table id="form" border="0">
+        <tr>
+          <td><input type="number" name="fam1" placeholder="Family 1?"></td>
+          <td><input type="number" name="fam2" placeholder="Family 2?"></td>
+          <td><input type="number" name="fam3" placeholder="Family 3?"></td>
+        </tr>
+        <tr>
+          <td><input type="number" name="fam4" placeholder="Family 4?"></td>
+          <td><input type="number" name="fam5" placeholder="Family 5?"></td>
+          <td><button type="submit">Play!</button></td>
+        </tr>
+      </table>
+    </form>
     <div class="col">
       <div class="fam1 bar negative"></div>
       <div class="fam2 bar negative"></div>
@@ -156,7 +158,7 @@
         initials.map(function(elem) {
           $('input[name="fam' + (elem.index + 1) + '"]').val(elem.value);
         });
-        $('#play').click(play);
+        $('#play').submit(play);
       })
     </script>
   </body>
