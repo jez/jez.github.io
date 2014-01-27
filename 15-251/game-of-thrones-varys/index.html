@@ -9,17 +9,48 @@
       .orange.button { background-color: #e69138; }
       .green.button { background-color: #6aa84f; }
       .purple.button { background-color: #674ea7; }
-      .button { width: 120px; padding: 10px 0px; text-align: center; border-radius: 3px; font-family: sans-serif; color: #ddd; }
-      .button:hover { color: white; font-weight: bold; cursor: pointer; }
-      .orange.button:hover ~ .orange.circle { background-color: ; }
-      #circle-wrapper { width: 300px; margin: 30px auto; position: relative; }
+      .button { 
+        width: 120px; 
+        padding: 10px 0px;
+        text-align: center;
+        border-radius: 3px;
+        font-family: sans-serif;
+        color: #ddd; }
+      .button:hover { 
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      #circle-wrapper { 
+        width: 300px;
+        margin: 30px auto;
+        position: relative;
+      }
       .orange.circle { border: 4px solid #e69138; }
       .green.circle { border: 4px solid #6aa84f; }
       .purple.circle { border: 4px solid #674ea7; }
-      .circle { position: absolute; display: inline; height: 200px; width: 200px; border-radius: 50%; }
-      .circle.green { left: 100px; }
-      .circle.purple { top: 85px; left: 50px; }
-      .stone { position: absolute; height: 20px; width: 20px; border-radius: 50%; border: 2px solid white; cursor: pointer; }
+      .circle { 
+        position: absolute;
+        display: inline;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+      }
+      .circle.green { 
+        left: 100px;
+      }
+      .circle.purple { 
+        top: 85px;
+        left: 50px;
+      }
+      .stone { 
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 2px solid white;
+        cursor: pointer;
+      }
       .blue { background-color: #3c78d8; }
       .red { background-color: #e06666; }
       #s1 { top: 70px; left: 45px; }
@@ -29,7 +60,10 @@
       #s5 { top: 160px; left: 75px; }
       #s6 { top: 160px; left: 208px; }
       #s7 { top: 230px; left: 143px; }
-      p { font-family: sans-serif; text-align: center; }
+      p { 
+        font-family: sans-serif;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -49,8 +83,16 @@
       </tr>
     </table>
     <div id="circle-wrapper">
-      <div class="circle orange"></div> <div class="circle green"></div> <div class="circle purple"></div> <div id="s1" class="stone blue"></div>
-      <div id="s2" class="stone blue"></div> <div id="s3" class="stone blue"></div> <div id="s4" class="stone blue"></div> <div id="s5" class="stone blue"></div> <div id="s6" class="stone blue"></div> <div id="s7" class="stone blue"></div>
+      <div class="circle orange"></div>
+      <div class="circle green"></div>
+      <div class="circle purple"></div> 
+      <div id="s1" class="stone blue"></div>
+      <div id="s2" class="stone blue"></div> 
+      <div id="s3" class="stone blue"></div> 
+      <div id="s4" class="stone blue"></div> 
+      <div id="s5" class="stone blue"></div> 
+      <div id="s6" class="stone blue"></div> 
+      <div id="s7" class="stone blue"></div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
