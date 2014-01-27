@@ -15,6 +15,8 @@
       .bar {
         height: 50px;
         width: 0px;
+        font-family: sans-serif;
+        font-size: 20px;
       }
       .negative {
         background-color: #e06666;
@@ -34,11 +36,16 @@
         margin: 0 auto;
         display: block;
       }
+      #output {
+        text-align: center;
+        font-family: sans-serif;
+        fomt-size: 16px;
+      }
       p { font-family: sans-serif; }
     </style>
   </head>
   <body>
-    <table border="0">
+    <table id="form" border="0">
       <tr>
         <td><input type="number" name="fam1" placeholder="Family 1?"></td>
         <td><input type="number" name="fam2" placeholder="Family 2?"></td>
@@ -57,7 +64,7 @@
       <div class="fam4 bar negative"></div>
       <div class="fam5 bar negative"></div>
     </div>
-    <div id="col2" class="col">
+    <div class="col">
       <div class="fam1 bar positive"></div>
       <div class="fam2 bar positive"></div>
       <div class="fam3 bar positive"></div>
@@ -65,9 +72,21 @@
       <div class="fam5 bar positive"></div>
     </div>
     <button id="step">Step</button>
+    <table id="output"></div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
       var values = [];
+      function sum(arr) {
+        var result = 0;
+        for(var i = 0; i < arr.length; i++) { result += arr[i].value; }
+        return result;
+      }
+      function allPositive(arr) {
+        for(var i = 0; i < arr.length; i++) {
+          if(Number(arr[i]) < 0) {return false;}
+        }
+        return true;
+      }
       function setWidth(family, value) {
         if(value === 0) {
           $('.' + family).css('width', 0);
@@ -88,36 +107,52 @@
             break;
           }
         }
+        var data = '';
+        values.forEach(function(elem, i, arr) {
+          data += '<td>' + elem + '</td>';
+        });
+        $('#output').prepend('<tr>' + data + '</tr>');
         setWidth('fam1', values[0]);
         setWidth('fam2', values[1]);
         setWidth('fam3', values[2]);
         setWidth('fam4', values[3]);
         setWidth('fam5', values[4]);
+        if(allPositive(values)) {
+          $('#step').click(function(e) {
+            if(confirm('Again?')) {
+              location.reload();
+            }
+          });
+        }
       }
       function play(e) {
         e.preventDefault();
-        values.push($('input[name="fam1"]').val());
-        values.push($('input[name="fam2"]').val());
-        values.push($('input[name="fam3"]').val());
-        values.push($('input[name="fam4"]').val());
-        values.push($('input[name="fam5"]').val());
-        $('table').detach();
-        step();
+        values.push(Number($('input[name="fam1"]').val()));
+        values.push(Number($('input[name="fam2"]').val()));
+        values.push(Number($('input[name="fam3"]').val()));
+        values.push(Number($('input[name="fam4"]').val()));
+        values.push(Number($('input[name="fam5"]').val()));
+        $('#form').detach();
+        setWidth('fam1', values[0]);
+        setWidth('fam2', values[1]);
+        setWidth('fam3', values[2]);
+        setWidth('fam4', values[3]);
+        setWidth('fam5', values[4]);
+        var data = '';
+        values.forEach(function(elem, i, arr) {
+          data += '<td>' + elem + '</td>';
+        });
+        $('#output').prepend('<tr>' + data + '</tr>');
         $('#step').click(step);
       }
       $(document).ready(function() {
-        function sum(arr) {
-          var result = 0;
-          for(var i = 0; i < arr.length; i++) { result += arr[i].value; }
-          return result;
-        }
         do {
           var initials = [];
           for(var i = 0; i < 5; i++) {
             initials.push({index: i, value: Math.floor(Math.random() * 41) - 20});
           }
-          console.log(sum(initials));
-        } while(sum(initials) < 0);
+          console.log("Checking sum: " + sum(initials));
+        } while(sum(initials) < 0 && allPositive(initials));
         initials.map(function(elem) {
           $('input[name="fam' + (elem.index + 1) + '"]').val(elem.value);
         });
