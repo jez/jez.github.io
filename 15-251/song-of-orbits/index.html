@@ -159,8 +159,6 @@
             data += '<td class="light-green">' + elem + '</td>';
           }
         });
-        var absolute = arrayAbsolute(values);
-        data += '<td class="green">' + absolute + '</td>';
         $('#output').prepend('<tr>' + data + '</tr>');
         $('#step').click(step);
       }
