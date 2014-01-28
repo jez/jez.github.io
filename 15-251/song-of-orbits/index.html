@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <!-- NOTE: I don't normally write apps with HTML, CSS, and JavaScript all in one page.-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +26,12 @@
         border-right: 1px solid black;
         border-bottom: 1px solid black;
       }
+      .light-red {
+        background-color: #f4cccc;
+      }
+      .light-green {
+        background-color: #d9ead3;
+      }
       .positive {
         background-color: #6aa84f;
         float: left;
@@ -37,9 +44,9 @@
         display: block;
       }
       #output {
-        text-align: center;
-        font-family: sans-serif;
-        fomt-size: 16px;
+        text-align: right;
+        font-family: "Menlo", monospace;
+        font-size: 16px;
       }
       p { font-family: sans-serif; }
     </style>
@@ -74,7 +81,7 @@
       <div class="fam5 bar positive"></div>
     </div>
     <button id="step">Step</button>
-    <table id="output"></div>
+    <table id="output"></table>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
       var values = [];
@@ -111,7 +118,11 @@
         }
         var data = '';
         values.forEach(function(elem, i, arr) {
-          data += '<td>' + elem + '</td>';
+          if(Number(elem) < 0) {
+            data += '<td class="light-red">' + elem + '</td>';
+          } else {
+            data += '<td class="light-green">' + elem + '</td>';
+          }
         });
         $('#output').prepend('<tr>' + data + '</tr>');
         setWidth('fam1', values[0]);
@@ -142,8 +153,14 @@
         setWidth('fam5', values[4]);
         var data = '';
         values.forEach(function(elem, i, arr) {
-          data += '<td>' + elem + '</td>';
+          if(Number(elem) < 0) {
+            data += '<td class="light-red">' + elem + '</td>';
+          } else {
+            data += '<td class="light-green">' + elem + '</td>';
+          }
         });
+        var absolute = arrayAbsolute(values);
+        data += '<td class="green">' + absolute + '</td>';
         $('#output').prepend('<tr>' + data + '</tr>');
         $('#step').click(step);
       }
