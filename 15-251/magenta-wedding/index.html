@@ -81,7 +81,7 @@
         for(var r = 0; r < rows; r++) {
           var current = [];
           for(var c = 0; c < cols; c++) {
-            current.push({val: randoms[r * cols + c], row: r, col: c, awards: ''});
+            current.push({val: Number(randoms[r * cols + c]) + 1, row: r, col: c, awards: ''});
           }
           data.push(current);
         }
@@ -96,6 +96,7 @@
               return 0;
             }
           });
+          console.log(dataRow);
           // Mark the awards
           for(var i = 0; i < p; i++) {
             dataRow[i].awards += 'row-winner';
