@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <!-- NOTE: I don't normally write apps with HTML, CSS, and JavaScript all in one page.-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Song of Orbits</title>
+    <style>
+      table {
+        margin: 0 auto;
+      }
+      .row-winner, .col-winner {
+        color: white;
+      }
+      .row-winner {
+        background-color: #ffe599;
+      }
+      .col-winner {
+        background-color: #a4c2f4;
+      }
+      .row-winner.col-winner {
+        background-color: #b6d7a8
+      }
+      #output {
+        text-align: center;
+        font-family: "Menlo", monospace;
+        font-size: 16px;
+      }
+      #output td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="play">
+      <table id="form" border="0">
+        <tr>
+          <td><input type="number" name="rows" placeholder="Rows?"></td>
+          <td><input type="number" name="cols" placeholder="Cols?"></td>
+          <td><input type="number" name="row-winners" placeholder="Winners per row?"></td>
+          <td><input type="number" name="col-winners" placeholder="Winners per col?"></td>
+          <td><button type="submit">Play!</button></td>
+        </tr>
+      </table>
+    </form>
+    <table id="output"></table>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      var rows, cols, p, q;
+      function play(e) {
+        e.preventDefault();
+        rows = Number($('input[name="rows"]').val());
+        cols = Number($('input[name="cols"]').val());
+        p = Number($('input[name="row-winners"]').val());
+        q = Number($('input[name="col-winners"]').val());
+        var ordereds = [];
+        for(var i = 0; i < rows * cols; i++) {
+          ordereds.push(i);
+        }
+        var randoms = [];
+        while(ordereds.length > 0) {
+          randoms.push(ordereds.splice(Math.floor(ordereds.length * Math.random()), 1));
+        }
+        var data = [];
+        for(var r = 0; r < rows; r++) {
+          var current = [];
+          for(var c = 0; c < cols; c++) {
+            current.push({val: randoms[r * cols + c], row: r, col: c, awards: ''});
+          }
+          data.push(current);
+        }
+        data.forEach(function(dataRow, index, arr) {
+          // Sort by value (for giving awards)
+          dataRow.sort(function(a, b) {
+            if(a.val < b.val) {
+              return -1;
+            } else if(a.val > b.val) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
+          // Mark the awards
+          for(var i = 0; i < p; i++) {
+            dataRow[i].awards += 'row-winner';
+          }
+          // Put row back in order of cols
+          dataRow.sort(function(a, b) {
+            if(a.col < b.col) {
+              return -1;
+            } else if(a.col > b.col) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
+        });
+        var transposed = [];
+        for(var c = 0; c < cols; c++) {
+          var current = [];
+          for(var r = 0; r < rows; r++) {
+            current.push(data[r][c]);
+          }
+          transposed.push(current);
+        }
+        transposed.forEach(function(dataCol, index, arr) {
+          // Sort by value (for giving awards)
+          dataCol.sort(function(a, b) {
+            if(a.val < b.val) {
+              return -1;
+            } else if(a.val > b.val) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
+          // Mark the awards
+          for(var i = 0; i < p; i++) {
+            dataCol[i].awards += ' col-winner';
+          }
+          // Put col back in order of rows
+          dataCol.sort(function(a, b) {
+            if(a.row < b.row) {
+              return -1;
+            } else if(a.row > b.row) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
+        });
+        data = [];
+        for(var r = 0; r < rows; r++) {
+          var current = [];
+          for(var c = 0; c < cols; c++) {
+            current.push(transposed[c][r]);
+          }
+          data.push(current);
+        }
+        // Now all have been marked in the rows and cols, and the data is in the right order.
+        // Construct the table.
+        $('#form').detach();
+        data.forEach(function(dataRow, index, arr) {
+          var htmlRow = '<tr>'
+          dataRow.forEach(function(dataItem, index, arr) {
+            htmlRow += '<td class="' + dataItem.awards + '">' + dataItem.val + '</td>';
+          });
+          htmlRow += '</tr>';
+          $('#output').append(htmlRow);
+        });
+      }
+      $(document).ready(function() {
+        $('#play').submit(play);
+      })
+    </script>
+  </body>
+</html>
