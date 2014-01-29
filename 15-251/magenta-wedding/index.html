@@ -29,6 +29,11 @@
       #output td {
         padding: 10px;
       }
+      h3 {
+        display: inline-block;
+        font-family: "Menlo", monospace;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -44,6 +49,9 @@
       </table>
     </form>
     <table id="output"></table>
+    <h3 class="row-winner">Row Winner</h3>
+    <h3 class="col-winner">Col Winner</h3>
+    <h3 class="row-winner col-winner">Row and Col Winner</h3>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
       var rows, cols, p, q;
