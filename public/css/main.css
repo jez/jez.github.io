@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Electrolize);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+/* line 9, ../sass/main.scss */
+.reset {
+  color: white;
+}
+
+/* line 12, ../sass/main.scss */
+.light {
+  font-weight: 200;
+}
+
+/* line 15, ../sass/main.scss */
+a.brand-success {
+  color: #b8d41e;
+}
+
+/* line 18, ../sass/main.scss */
+a.brand-success:hover {
+  color: #c9e338;
+}
+
+/* line 21, ../sass/main.scss */
+.no-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* line 25, ../sass/main.scss */
+.site-header {
+  font-size: 72px;
+}
+
+/* line 30, ../sass/main.scss */
+.well.experience,
+.well.project {
+  height: 200px;
+  cursor: pointer;
+}
+
+/* line 36, ../sass/main.scss */
+.well.experience.active,
+.well.project.active {
+  box-shadow: 0 0 10px 5px #4dbce9;
+}
+
+/* line 40, ../sass/main.scss */
+#texdown-image {
+  margin-top: 50px;
+}
+
+/* line 43, ../sass/main.scss */
+#print-image {
+  margin-top: 38px;
+}
+
+/* line 47, ../sass/main.scss */
+#gitorial-logo {
+  margin-top: 50px;
+}
+
+/* line 52, ../sass/main.scss */
+#sdnb-logo,
+#kumon-logo {
+  padding-top: 50px;
+}
+
+/* line 56, ../sass/main.scss */
+#zimms-logo {
+  padding-top: 25px;
+}
+
+/* line 61, ../sass/main.scss */
+.experience-expand,
+.project-expand {
+  background: #222;
+  padding-bottom: 20px;
+  box-shadow: inset 0 0 10px 5px #000;
+  display: none;
+}
+
+/* line 68, ../sass/main.scss */
+.footer {
+  margin-top: 40px;
+  padding-top: 5px;
+  background: #222;
+  height: 50px;
+}
