@@ -1,0 +1,73 @@
+@import "compass";
+@import url(http://fonts.googleapis.com/css?family=Electrolize);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+
+$light_blue: #4DBCE9;
+$dark_blue: #219BCC;
+$brand_success: #B8D41E;
+
+.reset {
+  color: white;
+}
+.light {
+  font-weight: 200;
+}
+a.brand-success {
+  color: $brand_success;
+}
+a.brand-success:hover {
+  color: lighten($brand_success, 8%);
+}
+.no-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.site-header {
+  font-size: 72px;
+}
+
+.well.experience,
+.well.project {
+  height: 200px;
+  cursor: pointer;
+}
+
+.well.experience.active,
+.well.project.active {
+  box-shadow: 0 0 10px 5px $light_blue;
+}
+
+#texdown-image {
+  margin-top: 50px;
+}
+#print-image {
+  margin-top: 38px;
+}
+
+#gitorial-logo {
+  margin-top: 50px;
+}
+
+#sdnb-logo,
+#kumon-logo {
+  padding-top: 50px;
+}
+
+#zimms-logo {
+  padding-top: 25px;
+}
+
+.experience-expand,
+.project-expand {
+  background: #222;
+  padding-bottom: 20px;
+  box-shadow: inset 0 0 10px 5px #000;
+  display: none;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 5px;
+  background: #222;
+  height: 50px;
+}

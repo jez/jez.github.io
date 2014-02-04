@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Hone your skills! Beat Voldemort!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game of Thrones - Littlefinger</title>
+    <style>
+      .blue { background-color: #3c78d8; }
+      .red { background-color: #e06666; }
+      div:not(#div-wrapper) {
+        padding: 20px 0;
+        width: 60px;
+        border: 2px solid #333;
+        border-radius: 4px;
+        display: inline-block;
+        margin: 4px;
+        text-align: center;
+        color: white;
+        margin-top: -30px;
+      }
+      div.control {  background-color: #777; cursor: pointer; }
+      div.control, div.info {
+        padding: 0px !important;
+        margin-top: 0px !important;
+        height: 60px;
+      }
+      h1 {
+        color: white;
+        display: inline-block;
+        padding: 0 20px;
+        font-family: Menlo, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="number" name="rows" placeholder="Number of rows?">
+      <input type="number" name="cols" placeholder="Number of cols?">
+      <button>Play!</button>
+    </form>
+    <div id="div-wrapper">
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      var rows;
+      var cols;
+      var divs;
+      var reds = 0;
+      var blues = 0;
+      var greens = 0;
+      var total;
+      function move(e) {
+        var r = $(e.currentTarget).data('row');
+        var c = $(e.currentTarget).data('col');
+        var color = $(e.currentTarget).data('color');
+        var $up = $('#' + (r - 1) + '-' + c);
+        console.log($up);
+        var $down = $('#' + (r + 1) + '-' + c);
+        console.log($down);
+        var $left = $('#' + r + '-' + (c - 1));
+        console.log($left);
+        var $right = $('#' + r + '-' + (c + 1));
+        console.log($right);
+        var $neighbors = [$up, $down, $left, $right];
+        if(color == 'green') {
+          $(e.currentTarget).toggleClass('green red').data('color', 'red');
+          reds++;
+          greens--;
+          $neighbors.forEach(function($elem, i, array) {
+            console.log($elem[0]);
+            if($elem[0]) {
+              console.log($elem.data('color'));
+              if($elem.data('color') == 'green') {
+                $elem.toggleClass('green blue').data('color', 'blue');
+                if(greens > 0) { greens--; }
+                blues++;
+                } else if($elem.data('color') == 'blue') {
+                $elem.toggleClass('blue green').data('color', 'green');
+                if (blues > 0 ) { blues--; }
+                console.log('blue: ' + blues)
+                greens++;
+              }
+            }
+          });
+          $('#reds').html(reds);
+          $('#blues').html(blues);
+          $('#greens').html(greens);
+          if(reds == total) {
+            alert("Hooray! You're such a champ. Keep it up.");
+            location.reload();
+          } else if(greens == 0) {
+            alert("You're pretty bad at this game. This board was winnable.");
+            location.reload();
+          }
+        }
+      }
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      function play(e) {
+        e.preventDefault();
+        rows = $('form input[name="rows"]').val();
+        cols = $('form input[name="cols"]').val();
+        $('form').detach();
+        for(var c = 0; c <= cols; c++) {
+          $('#div-wrapper').append('<div class="control" id="c0-' + c + '"></div>');
+          if(c != 0) {
+            $('.control#c0-' + c).data({row: 0, col: c}).click(move);
+          } else {
+            $('.control#c0-0').css('visibility', 'hidden');
+          }
+        }
+        $('#div-wrapper').append('<br>');
+        for(var r = 1; r <= rows; r++) {
+          $('#div-wrapper').append('<div class="control" id="c' + r + '-0"></div>');
+          $('.control#c' + r + '-0').data({row: r, col: 0}).click(move);
+          for(var c = 1; c <= cols; c++) {
+            var strength = getRandomInt(-100, 100);
+            $('#div-wrapper').append('<div id="' + r + '-' + c + '"></div>');
+            $('#' + r + '-' + c).addClass('blue').text(strength).data({row: r, col: c, strength: strength}).click(move);
+          }
+          $('#div-wrapper').append('<div class="info" id="i' + r + '-0"></div>');
+          $('#div-wrapper').append('<br>');
+        }
+        for(var c = 0; c <= cols; c++) {
+          $('#div-wrapper').append('<div class="info" id="i0-' + c + '"></div>');
+          if(c === 0) { $('.info#i0-0').css('visibility', 'hidden'); }
+        }
+      }
+
+      $(document).ready(function() {
+        $('button').click(play);
+      });
+    </script>
+  </body>
+</html>
