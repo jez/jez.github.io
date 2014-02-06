@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <!-- NOTE: I don't normally write apps with HTML, CSS, and JavaScript all in one page.-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +25,10 @@
         border-right: 1px solid black;
         border-bottom: 1px solid black;
       }
+      .green {
+        color: white;
+        background-color: #555;
+      }
       .light-red {
         background-color: #f4cccc;
       }
@@ -38,8 +41,9 @@
         clear: both;
         border-bottom: 1px solid black;
       }
-      #step {
-        width: 50px;
+      #step,
+      #stepRandom,
+      #stepAll {
         margin: 0 auto;
         display: block;
       }
@@ -81,6 +85,8 @@
       <div class="fam5 bar positive"></div>
     </div>
     <button id="step">Step</button>
+    <button id="stepRandom">Step (Random)</button>
+    <button id="stepAll">Step (All)</button>
     <table id="output"></table>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
@@ -96,6 +102,15 @@
         }
         return true;
       }
+      function potential(arr) {
+        var result = 0;
+        values.forEach(function(elem, i, arr) {
+          var max = Math.max(elem, arr[(i + 2) % 5]);
+          var min = Math.min(elem, arr[(i + 2) % 5]);
+          result += Math.pow(max - min, 2);
+        });
+        return result;
+      }
       function setWidth(family, value) {
         if(value === 0) {
           $('.' + family).css('width', 0);
@@ -107,6 +122,32 @@
           $('.' + family + '.positive').css('width', 0);
         }
       }
+      function finishStep(e) {
+        var data = '';
+        values.forEach(function(elem, i, arr) {
+          if(Number(elem) < 0) {
+            data += '<td class="light-red">' + elem + '</td>';
+          } else {
+            data += '<td class="light-green">' + elem + '</td>';
+          }
+        });
+        var phi = potential(values);
+        data += '<td class="green">' + phi + '</td>';
+        $('#output').prepend('<tr>' + data + '</tr>');
+        setWidth('fam1', values[0]);
+        setWidth('fam2', values[1]);
+        setWidth('fam3', values[2]);
+        setWidth('fam4', values[3]);
+        setWidth('fam5', values[4]);
+        if(allPositive(values)) {
+          $('#step, #stepRandom, #stepAll').off();
+          $('#step, #stepRandom, #stepAll').click(function(e) {
+            if(confirm('Again?')) {
+              location.reload();
+            }
+          });
+        }
+      }
       function step(e) {
         for(var i = 0; i < values.length; i++) {
           if(values[i] < 0) {
@@ -116,27 +157,37 @@
             break;
           }
         }
-        var data = '';
-        values.forEach(function(elem, i, arr) {
-          if(Number(elem) < 0) {
-            data += '<td class="light-red">' + elem + '</td>';
-          } else {
-            data += '<td class="light-green">' + elem + '</td>';
-          }
-        });
-        $('#output').prepend('<tr>' + data + '</tr>');
-        setWidth('fam1', values[0]);
-        setWidth('fam2', values[1]);
-        setWidth('fam3', values[2]);
-        setWidth('fam4', values[3]);
-        setWidth('fam5', values[4]);
-        if(allPositive(values)) {
-          $('#step').click(function(e) {
-            if(confirm('Again?')) {
-              location.reload();
-            }
-          });
+        finishStep(e);
+      }
+      function stepRandom(e) {
+        console.log('here');
+        var ordereds = [0,1,2,3,4];
+        var randoms = [];
+        for(var i = 0; i < 5; i++) {
+          randoms.push(Number(ordereds.splice(Math.floor(ordereds.length * Math.random()), 1)));
         }
+        for(var i = 0; i < 5; i++) {
+          console.log('i: ' + i + ' randoms[i]: ' + randoms[i]);
+          console.log(typeof randoms[i] + ', ' + randoms[i]);
+          if(values[randoms[i]] < 0) {
+            values[randoms[i]] = - values[randoms[i]];
+            values[(randoms[i] + 4) % 5] -= values[randoms[i]];
+            values[(randoms[i] + 1) % 5] -= values[randoms[i]];
+            break;
+          }
+        }
+        finishStep(e);
+      }
+      function stepAll(e) {
+        var olds = values.slice(0);
+        for(var i = 0; i < values.length; i++) {
+          if(olds[i] < 0) {
+            values[i] += 2 * (0 - olds[i]);
+            values[(i + 4) % 5] += olds[i];
+            values[(i + 1) % 5] += olds[i];
+          }
+        }
+        finishStep(e);
       }
       function play(e) {
         e.preventDefault();
@@ -146,21 +197,10 @@
         values.push(Number($('input[name="fam4"]').val()));
         values.push(Number($('input[name="fam5"]').val()));
         $('#form').detach();
-        setWidth('fam1', values[0]);
-        setWidth('fam2', values[1]);
-        setWidth('fam3', values[2]);
-        setWidth('fam4', values[3]);
-        setWidth('fam5', values[4]);
-        var data = '';
-        values.forEach(function(elem, i, arr) {
-          if(Number(elem) < 0) {
-            data += '<td class="light-red">' + elem + '</td>';
-          } else {
-            data += '<td class="light-green">' + elem + '</td>';
-          }
-        });
-        $('#output').prepend('<tr>' + data + '</tr>');
+        finishStep(e);
         $('#step').click(step);
+        $('#stepRandom').click(stepRandom);
+        $('#stepAll').click(stepAll);
       }
       $(document).ready(function() {
         do {
