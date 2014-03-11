@@ -38,7 +38,7 @@ a.brand-success:hover {
   }
 
   /* line 37, ../sass/main.scss */
-  h2 {
+  h3 {
     font-size: 36px;
   }
 }
@@ -69,7 +69,7 @@ a.brand-success:hover {
 
 /* line 63, ../sass/main.scss */
 .well.project.selected {
-  box-shadow: 0 0 10px 5px white;
+  box-shadow: 0 0 10px 5px #4dbce9;
 }
 
 /* line 67, ../sass/main.scss */

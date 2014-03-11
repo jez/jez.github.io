@@ -34,7 +34,7 @@ a.brand-success:hover {
   .site-header {
     font-size: 56px;
   }
-  h2 {
+  h3 {
     font-size: 36px;
   }
 }
@@ -61,7 +61,7 @@ a.brand-success:hover {
 }
 
 .well.project.selected {
-  box-shadow: 0 0 10px 5px white;
+  box-shadow: 0 0 10px 5px $light_blue;
 }
 
 .well.project h3 {
