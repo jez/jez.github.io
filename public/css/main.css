@@ -42,14 +42,14 @@ a.brand-success:hover {
     font-size: 36px;
   }
 }
-/* line 43, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 .display-table {
   display: table;
   width: 100%;
   margin-bottom: 20px;
 }
 
-/* line 48, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 .well.project {
   height: 200px;
   cursor: pointer;
@@ -57,24 +57,30 @@ a.brand-success:hover {
   vertical-align: middle;
 }
 
-/* line 55, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 .well.project:hover {
   box-shadow: inset 0 0 20px black;
 }
 
-/* line 59, ../sass/main.scss */
+/* line 58, ../sass/main.scss */
 .well.project:active {
   box-shadow: inset 0 0 30px black;
 }
 
-/* line 63, ../sass/main.scss */
+/* line 62, ../sass/main.scss */
 .well.project.selected {
   box-shadow: 0 0 10px 5px #4dbce9;
 }
 
-/* line 67, ../sass/main.scss */
+/* line 66, ../sass/main.scss */
 .well.project h3 {
   margin: 0;
+}
+
+/* line 70, ../sass/main.scss */
+.img-thumbnail {
+  padding: 0px;
+  border: 4px solid #ddd;
 }
 
 /*
@@ -85,7 +91,7 @@ a.brand-success:hover {
 #sdnb-logo, #kumon-logo { padding-top: 50px; }
 #zimms-logo { padding-top: 25px; }
 */
-/* line 81, ../sass/main.scss */
+/* line 85, ../sass/main.scss */
 section {
   margin-top: 97px;
   background: #222;
@@ -95,22 +101,27 @@ section {
 }
 
 @media (min-width: 1280px) {
-  /* line 90, ../sass/main.scss */
+  /* line 94, ../sass/main.scss */
   section {
     height: 640px;
   }
 }
 @media (max-width: 992px) {
-  /* line 96, ../sass/main.scss */
+  /* line 100, ../sass/main.scss */
   section {
     display: block;
     margin-top: 10px;
   }
 }
-/* line 102, ../sass/main.scss */
+/* line 106, ../sass/main.scss */
 footer {
   margin-top: 40px;
   padding-top: 5px;
   background: #222;
   height: 50px;
+}
+
+/* line 113, ../sass/main.scss */
+footer h6 {
+  margin-bottom: 0px;
 }
