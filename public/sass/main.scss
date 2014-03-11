@@ -30,6 +30,15 @@ a.brand-success:hover {
 .site-header {
   font-size: 72px;
 }
+@media(max-width: 768px) {
+  .site-header {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+
 
 .display-table {
   display: table;
