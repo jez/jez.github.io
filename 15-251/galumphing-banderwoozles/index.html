@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Galumphing Banderwoozles</title>
     <style>
-      .blue {
+      .blue, #blues {
         background-color: #3c78d8;
       }
-      .green {
+      .green, #greens {
         background-color: #6aa84f;
       }
-      .red {
+      .red, #reds {
         background-color: #e06666;
       }
-      div:not(#div-wrapper) {
+      .tile {
         height: 60px;
         width: 60px;
         border: 2px solid #333;
@@ -38,9 +38,9 @@
       <input type="number" name="cols" placeholder="Number of cols?">
       <button>Play!</button>
     </form>
-    <h1 id="reds" class="red">0</h1>
-    <h1 id="greens" class="green">0</h1>
-    <h1 id="blues" class="blue">0</h1>
+    <h1 id="reds">0</h1>
+    <h1 id="greens">0</h1>
+    <h1 id="blues">0</h1>
     <div id="div-wrapper">
     </div>
 
@@ -105,7 +105,7 @@
         $('form').detach();
         for(var r = 0; r < rows; r++) {
           for(var c = 0; c < cols; c++) {
-            $('#div-wrapper').append('<div id="' + r + '-' + c + '"></div>');
+            $('#div-wrapper').append('<div class="tile" id="' + r + '-' + c + '"></div>');
             $('#' + r + '-' + c).addClass('blue').data({row: r, col: c, color: 'blue'}).click(move);
           }
           $('#div-wrapper').append('<br>');
