@@ -26,35 +26,50 @@ html
             span.reset  - 
             a.brand-success(href="//github.com/z1mm32m4n") GitHub
         p.light My name is Jacob Zimmerman, I'm 19 years old, and I love calling New Berlin, Wisconsin home. I currently attend Carnegie Mellon University studying Computer Science as a part of the class of 2017 (with hopes of graduating sooner!).
+        p.light Last summer, I worked at Bloomberg LP as a software engineering intern. I worked in C++ making an exchange simulator as a part of the Tradebook Futures team. 
+        p.light I prefer wielding C++, JavaScript, and Python, but I've also worked in C, Java, SML, and a few other languages. I pick things up pretty quickly too, and I always love tackling new challenges.
         p.light I spend my free time (wait... that doesn't sound right) making cool things and trying to help other people make cooler things. I'm pretty good with a yo-yo, I love playing ping-pong and tennis (when it's not snowing outside), and I've had quite a few epic foosball matches.
-        p.light I prefer wielding Java, JavaScript, HTML/CSS, and Node.js, but I've also worked in C, C++, Python, and a few other languages. I pick things up pretty quickly too; everything you see here I've learned since I got to CMU back in August. I always love tackling new technologies and mixing things up.
     .row.no-margin
         .col-md-3
           h2.text-center.hidden-sm.hidden-xs Projects
           .row.no-margin
+            .col-md-12.display-table.hidden-sm.hidden-xs
+              .well.project(data-toggle="gitorial-description")
+                img.center-block#gitorial-image(src="/public/images/gitorial.png")
             .col-md-12.display-table.hidden-sm.hidden-xs
               .well.project.selected(data-toggle="texdown-description")
                 img.center-block#texdown-image(src="/public/images/texdown-logo-white-300.png")
             .col-md-12.display-table.hidden-sm.hidden-xs
               .well.project(data-toggle="print-description")
                 img.center-block#print-image(src="/public/images/print-at-scottylabs.png")
-            .col-md-12.display-table.hidden-sm.hidden-xs
-              .well.project(data-toggle="gitorial-description")
-                img.center-block#gitorial-image(src="/public/images/gitorial.png")
         .col-md-3.col-md-push-6
           h2.text-center.hidden-sm.hidden-xs Experience
           .row.no-margin
             .col-md-12.display-table.hidden-sm.hidden-xs
+              .well.project#zimms-logo(data-toggle="bloomberg-description")
+                h3.reset.text-center Bloomberg LP
+            .col-md-12.display-table.hidden-sm.hidden-xs
               .well.project#sdnb-logo(data-toggle="sdnb-description")
-                h3.reset.text-center SDNB Tech 
+                h3.reset.text-center SDNB Tech
             .col-md-12.display-table.hidden-sm.hidden-xs
               .well.project#zimms-logo(data-toggle="zimms-description")
                 h3.reset.text-center Zimm&rsquo;s Yard Services
-            .col-md-12.display-table.hidden-sm.hidden-xs
-              .well.project#kumon-logo(data-toggle="kumon-description")
-                h3.reset.text-center Kumon
         .col-md-6.col-md-pull-3
           h2.text-center.visible-xs.visible-sm Projects and Experience
+          section#gitorial-description
+            .row.no-margin
+              .col-md-10.col-md-offset-1
+                h3 gitorial 
+                  small - 
+                    a.brand-success(href="//www.gitorial.com/") www.gitorial.com
+                p.lead With gitorial, making tutorials is as easy as commiting a repository to GitHub.
+                p The product of MHacks IV, this app made it to the top 10 at MHacks in September 2014. It reduces the process of creating a programming/code tutorial to three simple steps: make a GitHub repository where each commit is a step of a tutorial, point gitorial to the repository you created, and add some explanations to each step. Afterwards, you can distribute a link so everyone can see your tutorial.
+                p This project couldn't have happened without the help of 
+                  a(href="http://www.tomshen.me") Tom Shen
+                  | , 
+                  a(href="http://www.bezi.io/") Oscar Bezi
+                  | , and Justin Gallagher. We have tons of amazing features and usability enhancements planned which should make this project the absolute best way to create programming tutorials.
+                a.brand-success(href="https://github.com/bezi/gitorial") GitHub
           section#texdown-description(style="display: block;")
             .row.no-margin
               .col-md-10.col-md-offset-1
@@ -63,7 +78,7 @@ html
                     a.brand-success(href="//www.texdown.org/") www.texdown.org
                 p.lead For efficient Markdown note-taking infused with the power of LaTeX.
                 p 
-                  | This is my favorite work-in-progress app. Targeting the technical computer science/math student, it allows people to efficiently combine the quickness and ease of Markdown note-taking with LaTeX for typesetting. It also features auto compilation, vim/emacs keybindings, cloud backup, and many other cool features that combine to make one awesome note-taking app. 
+                  | Targeting the technical computer science/math student, it allows people to efficiently combine the quickness and ease of Markdown note-taking with LaTeX for typesetting. It also features auto compilation, vim/emacs keybindings, cloud backup, and many other cool features that combine to make one awesome note-taking app. 
                 p I'm honored to share this project with 
                   a(href="http://oscarbezi.com/") Oscar Bezi
                   | , who is a fellow student at Carnegie Mellon University. 
@@ -78,20 +93,13 @@ html
                 p This app is the collaborative result of hard work done with 
                   a(href="scottylabs.org") ScottyLabs
                   | , a student organization dedicated to making things and helping fellow students make things. This project in particular has many plans for the future, including a mobile upload interface and more exhaustive printing features, to bring mobile printing at CMU up to the same level as desktop printing.
-          section#gitorial-description
+          section#bloomberg-description
             .row.no-margin
               .col-md-10.col-md-offset-1
-                h3 gitorial 
-                  small - 
-                    a.brand-success(href="//www.gitorial.com/") www.gitorial.com
-                p.lead With gitorial, making tutorials is as easy as commiting a repository to GitHub.
-                p The product of TartanHacks 2014, this app won $750 worth of AWS credit and nearly placed overall. It reduces the process of creating a programming/code tutorial to three simple steps: make a GitHub repository where each commit is a step of a tutorial, sign in to gitorial to add some explanation text to each slide, and finally view your live tutorial.
-                p This project never could have happened without the help of Aaron Gutierrez, 
-                  a(href="http://www.shyamr.info/") Shyam Raghavan
-                  | , and 
-                  a(href="http://westinlohne.com/") Westin Lohne
-                  | . In the future, we have tons of amazing features planned, the most prominent of which being using git diffs to show changes between steps, so people can more easily follow the sometimes subtle changes between steps of a tutorial.
-                a.brand-success(href="https://github.com/shyamraghavan/gitorial") GitHub
+                h3 Bloomberg, L.P.
+                p.lead May 2014 - August 2014
+                p This past summer I worked at Bloomberg L.P. My project was to refactor an exchange simulator, which was written in C++. In the end, I had removed about 3300 lines of code from the project, or about 33% of the codebase. 
+                p On top of that, I learned valuable collaboration and software design skills.
           section#sdnb-description
             .row.no-margin
               .col-md-10.col-md-offset-1
@@ -105,12 +113,12 @@ html
                 h3 Zimm's Yard Services
                 p.lead May 2008 - August 2013
                 p One of my most transformative work experiences was the business I ran every summer cutting grass in my neighborhood. Not only did I get to meet and interact with tons of great customers, I used the opportunity to perfect a Java app that tracked my expenses throughout the summers. Writing and rewriting the app every summer let me get into some nitty-gritty details of the Java language.
-          section#kumon-description
-            .row.no-margin
-              .col-md-10.col-md-offset-1
-                h3 Kumon Math and Reading
-                p.lead October 2011 - August 2013
-                p Working for almost two years as a math and reading tutor at Kumon was definitely one of the most fun jobs I ever had. I got to work one-on-one with students ranging from high-school to pre-K on every level of comprehension in between. It's from this job that I learned how best to explain topics and communicate new concepts in different ways to different people.
+          //section#kumon-description
+            //.row.no-margin
+              //.col-md-10.col-md-offset-1
+                //h3 Kumon Math and Reading
+                //p.lead October 2011 - August 2013
+                //p Working for almost two years as a math and reading tutor at Kumon was definitely one of the most fun jobs I ever had. I got to work one-on-one with students ranging from high-school to pre-K on every level of comprehension in between. It's from this job that I learned how best to explain topics and communicate new concepts in different ways to different people.
     .row.no-margin
       h3.text-center Other Projects
       .col-md-3.col-md-offset-1
@@ -159,7 +167,7 @@ html
         .col-md-8.col-md-offset-2
           h6.text-center Jacob Zimmerman
             span.reset  - 
-            a.brand-success(href="/Resume.pdf") Resume
+            a.brand-success(href="/resume/resume.pdf") Resume
             span.reset  - 
             a.brand-success(href="mailto:jake@zimmerman.io") Email
             span.reset  - 

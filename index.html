@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/css/main.css">
+    <script src="//fightforthefuture.github.io/reset-the-net-widget/widget/rtn.js" async></script>
   </head>
   <body>
     <div class="row no-margin">
@@ -19,10 +20,11 @@
     </div>
     <div class="row no-margin">
       <div class="col-md-6 col-md-offset-3">
-        <h4>About me <small><span class="reset"> - </span><a href="/resume/" class="brand-success">Resume</a><span class="reset"> - </span><a href="mailto:jake@zimmerman.io" class="brand-success">Email</a><span class="reset"> - </span><a href="//github.com/z1mm32m4n" class="brand-success">GitHub</a></small></h4>
+        <h4>About me <small><span class="reset"> - </span><a href="/Resume.pdf" class="brand-success">Resume</a><span class="reset"> - </span><a href="mailto:jake@zimmerman.io" class="brand-success">Email</a><span class="reset"> - </span><a href="//github.com/z1mm32m4n" class="brand-success">GitHub</a></small></h4>
         <p class="light">My name is Jacob Zimmerman, I'm 19 years old, and I love calling New Berlin, Wisconsin home. I currently attend Carnegie Mellon University studying Computer Science as a part of the class of 2017 (with hopes of graduating sooner!).</p>
+        <p class="light">Last summer, I worked at Bloomberg LP as a software engineering intern. I worked in C++ making an exchange simulator as a part of the Tradebook Futures team. </p>
+        <p class="light">I prefer wielding C++, JavaScript, and Python, but I've also worked in C, Java, SML, and a few other languages. I pick things up pretty quickly too, and I always love tackling new challenges.</p>
         <p class="light">I spend my free time (wait... that doesn't sound right) making cool things and trying to help other people make cooler things. I'm pretty good with a yo-yo, I love playing ping-pong and tennis (when it's not snowing outside), and I've had quite a few epic foosball matches.</p>
-        <p class="light">I prefer wielding Java, JavaScript, HTML/CSS, and Node.js, but I've also worked in C, C++, Python, and a few other languages. I pick things up pretty quickly too; everything you see here I've learned since I got to CMU back in August. I always love tackling new technologies and mixing things up.</p>
       </div>
     </div>
     <div class="row no-margin">
@@ -30,13 +32,13 @@
         <h2 class="text-center hidden-sm hidden-xs">Projects</h2>
         <div class="row no-margin">
           <div class="col-md-12 display-table hidden-sm hidden-xs">
+            <div data-toggle="gitorial-description" class="well project"><img id="gitorial-image" src="/public/images/gitorial.png" class="center-block"></div>
+          </div>
+          <div class="col-md-12 display-table hidden-sm hidden-xs">
             <div data-toggle="texdown-description" class="well project selected"><img id="texdown-image" src="/public/images/texdown-logo-white-300.png" class="center-block"></div>
           </div>
           <div class="col-md-12 display-table hidden-sm hidden-xs">
             <div data-toggle="print-description" class="well project"><img id="print-image" src="/public/images/print-at-scottylabs.png" class="center-block"></div>
-          </div>
-          <div class="col-md-12 display-table hidden-sm hidden-xs">
-            <div data-toggle="gitorial-description" class="well project"><img id="gitorial-image" src="/public/images/gitorial.png" class="center-block"></div>
           </div>
         </div>
       </div>
@@ -44,8 +46,13 @@
         <h2 class="text-center hidden-sm hidden-xs">Experience</h2>
         <div class="row no-margin">
           <div class="col-md-12 display-table hidden-sm hidden-xs">
+            <div id="zimms-logo" data-toggle="bloomberg-description" class="well project">
+              <h3 class="reset text-center">Bloomberg LP</h3>
+            </div>
+          </div>
+          <div class="col-md-12 display-table hidden-sm hidden-xs">
             <div id="sdnb-logo" data-toggle="sdnb-description" class="well project">
-              <h3 class="reset text-center">SDNB Tech </h3>
+              <h3 class="reset text-center">SDNB Tech</h3>
             </div>
           </div>
           <div class="col-md-12 display-table hidden-sm hidden-xs">
@@ -53,21 +60,29 @@
               <h3 class="reset text-center">Zimm&rsquo;s Yard Services</h3>
             </div>
           </div>
-          <div class="col-md-12 display-table hidden-sm hidden-xs">
-            <div id="kumon-logo" data-toggle="kumon-description" class="well project">
-              <h3 class="reset text-center">Kumon</h3>
-            </div>
-          </div>
         </div>
       </div>
       <div class="col-md-6 col-md-pull-3">
         <h2 class="text-center visible-xs visible-sm">Projects and Experience</h2>
+        <section id="gitorial-description">
+          <div class="row no-margin">
+            <div class="col-md-10 col-md-offset-1">
+              <h3>gitorial <small>- <a href="//www.gitorial.com/" class="brand-success">www.gitorial.com</a></small></h3>
+              <p class="lead">With gitorial, making tutorials is as easy as commiting a repository to GitHub.</p>
+              <p>The product of MHacks IV, this app made it to the top 10 at MHacks in September 2014. It reduces the process of creating a programming/code tutorial to three simple steps: make a GitHub repository where each commit is a step of a tutorial, point gitorial to the repository you created, and add some explanations to each step. Afterwards, you can distribute a link so everyone can see your tutorial.</p>
+              <p>This project couldn't have happened without the help of <a href="http://www.tomshen.me">Tom Shen</a>, <a href="http://www.bezi.io/">Oscar Bezi</a>, and Justin Gallagher. We have tons of amazing features and usability enhancements planned which should make this project the absolute best way to create programming tutorials.</p><a href="https://github.com/bezi/gitorial" class="brand-success">GitHub</a>
+            </div>
+          </div>
+        </section>
         <section id="texdown-description" style="display: block;">
           <div class="row no-margin">
             <div class="col-md-10 col-md-offset-1">
               <h3>TeXDown <small>- <a href="//www.texdown.org/" class="brand-success">www.texdown.org</a></small></h3>
               <p class="lead">For efficient Markdown note-taking infused with the power of LaTeX.</p>
-              <p>This is my favorite work-in-progress app. Targeting the technical computer science/math student, it allows people to efficiently combine the quickness and ease of Markdown note-taking with LaTeX for typesetting. It also features auto compilation, vim/emacs keybindings, cloud backup, and many other cool features that combine to make one awesome note-taking app. </p>
+              <p>
+                 
+                Targeting the technical computer science/math student, it allows people to efficiently combine the quickness and ease of Markdown note-taking with LaTeX for typesetting. It also features auto compilation, vim/emacs keybindings, cloud backup, and many other cool features that combine to make one awesome note-taking app. 
+              </p>
               <p>I'm honored to share this project with <a href="http://oscarbezi.com/">Oscar Bezi</a>, who is a fellow student at Carnegie Mellon University. </p><a href="https://github.com/bezi/texdown" class="brand-success">GitHub</a>
             </div>
           </div>
@@ -81,13 +96,13 @@
             </div>
           </div>
         </section>
-        <section id="gitorial-description">
+        <section id="bloomberg-description">
           <div class="row no-margin">
             <div class="col-md-10 col-md-offset-1">
-              <h3>gitorial <small>- <a href="//www.gitorial.com/" class="brand-success">www.gitorial.com</a></small></h3>
-              <p class="lead">With gitorial, making tutorials is as easy as commiting a repository to GitHub.</p>
-              <p>The product of TartanHacks 2014, this app won $750 worth of AWS credit and nearly placed overall. It reduces the process of creating a programming/code tutorial to three simple steps: make a GitHub repository where each commit is a step of a tutorial, sign in to gitorial to add some explanation text to each slide, and finally view your live tutorial.</p>
-              <p>This project never could have happened without the help of Aaron Gutierrez, <a href="http://www.shyamr.info/">Shyam Raghavan</a>, and <a href="http://westinlohne.com/">Westin Lohne</a>. In the future, we have tons of amazing features planned, the most prominent of which being using git diffs to show changes between steps, so people can more easily follow the sometimes subtle changes between steps of a tutorial.</p><a href="https://github.com/shyamraghavan/gitorial" class="brand-success">GitHub</a>
+              <h3>Bloomberg, L.P.</h3>
+              <p class="lead">May 2014 - August 2014</p>
+              <p>This past summer I worked at Bloomberg L.P. My project was to refactor an exchange simulator, which was written in C++. In the end, I had removed about 3300 lines of code from the project, or about 33% of the codebase. </p>
+              <p>On top of that, I learned valuable collaboration and software design skills.</p>
             </div>
           </div>
         </section>
@@ -110,15 +125,13 @@
             </div>
           </div>
         </section>
-        <section id="kumon-description">
-          <div class="row no-margin">
-            <div class="col-md-10 col-md-offset-1">
-              <h3>Kumon Math and Reading</h3>
-              <p class="lead">October 2011 - August 2013</p>
-              <p>Working for almost two years as a math and reading tutor at Kumon was definitely one of the most fun jobs I ever had. I got to work one-on-one with students ranging from high-school to pre-K on every level of comprehension in between. It's from this job that I learned how best to explain topics and communicate new concepts in different ways to different people.</p>
-            </div>
-          </div>
-        </section>
+        <!--section#kumon-description
+        //.row.no-margin
+          //.col-md-10.col-md-offset-1
+            //h3 Kumon Math and Reading
+            //p.lead October 2011 - August 2013
+            //p Working for almost two years as a math and reading tutor at Kumon was definitely one of the most fun jobs I ever had. I got to work one-on-one with students ranging from high-school to pre-K on every level of comprehension in between. It's from this job that I learned how best to explain topics and communicate new concepts in different ways to different people.
+        -->
       </div>
     </div>
     <div class="row no-margin">
@@ -146,7 +159,7 @@
       <div class="col-md-3 col-md-offset-3">
         <dl>
           <dt class="text-center">globalizr</dt>
-          <dd class="text-center"><a href="https://github.com/bezi/globalizr" class="brand-success">GitHub</a> - <a href="//globalizr.org" class="brand-success">globalizr.org</a><br><span class="light">Our (somewhat failed) HackPrinceton hack. It attempted to help people visualize aggregated global data.</span></dd>
+          <dd class="text-center"> <a href="https://github.com/bezi/globalizr" class="brand-success">GitHub</a> - <a href="//globalizr.org" class="brand-success">globalizr.org</a><br><span class="light">Our (somewhat failed) HackPrinceton hack. It attempted to help people visualize aggregated global data.</span></dd>
         </dl>
       </div>
       <div class="col-md-3">
@@ -159,13 +172,12 @@
     <footer>
       <div class="row no-margin">
         <div class="col-md-8 col-md-offset-2">
-          <h6 class="text-center">Jacob Zimmerman<span class="reset"> - </span><a href="/Resume.pdf" class="brand-success">Resume</a><span class="reset"> - </span><a href="mailto:jake@zimmerman.io" class="brand-success">Email</a><span class="reset"> - </span><a href="https://github.com/Z1MM32M4N" class="brand-success">GitHub</a><span class="reset"> - </span>(c) 2014</h6>
+          <h6 class="text-center">Jacob Zimmerman<span class="reset"> - </span><a href="/resume/resume.pdf" class="brand-success">Resume</a><span class="reset"> - </span><a href="mailto:jake@zimmerman.io" class="brand-success">Email</a><span class="reset"> - </span><a href="https://github.com/Z1MM32M4N" class="brand-success">GitHub</a><span class="reset"> - </span>(c) 2014</h6>
         </div>
       </div>
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="/public/js/bootstrap.min.js"></script>
     <script src="/public/js/main.js"></script>
-    <script src="//fightforthefuture.github.io/reset-the-net-widget/widget/rtn.js" async></script>
   </body>
 </html>
