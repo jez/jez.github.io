@@ -1,6 +1,6 @@
 @import 'compass/reset';
 @import 'compass/css3/border-radius';
-@import url(http://fonts.googleapis.com/css?family=Raleway:200,300);
+@import url(//fonts.googleapis.com/css?family=Raleway:200,300);
 
 /*
  * Table of Contents
@@ -173,7 +173,7 @@ $blue2: #0B5A97;
   h2,
   a,
   p {
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Helvetica Neue', Ariel, sans-serif;
     color: #fff;
     line-height: 1.5;
     text-align: center;
