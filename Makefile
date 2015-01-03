@@ -6,12 +6,14 @@ install:
 	bundle install
 
 build:
-	jade --watch . &
+	jade --watch .
+
+compass:
 	compass watch
 
 serve:
-	if which python3; then python3 -m http.server; else python -m SimpleHTTPServer; fi
+	@if which python3; then python3 -m http.server; else python -m SimpleHTTPServer; fi
 
 
-.PHONY: all serve build
+.PHONY: all serve build compass
 
