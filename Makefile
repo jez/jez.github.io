@@ -5,7 +5,7 @@ install:
 	gem install bundler
 	bundle install
 
-build:
+jade:
 	jade --watch .
 
 compass:
