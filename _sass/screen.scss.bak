@@ -1,0 +1,227 @@
+@import 'compass/reset';
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,300);
+
+/*
+ * Table of Contents
+ * -----------------
+ * 1. Mixins
+ * 2. Layout
+ * 3. Colors
+ * 4. Typography
+ */
+
+html,
+body {
+  height: 100%;
+}
+
+// No obnoxious underlines
+a {
+  text-decoration: none;
+}
+
+// center paragraphs when possible
+p {
+  margin: 20px auto;
+}
+
+// ----- Mixins ---------------------------------------------------------------
+// Given font size for large screen, include font-size for large and small
+@mixin responsive-font-size($size) {
+  @media screen and (min-width: $breakat_large) {
+    font-size: $size;
+  }
+  @media screen and (max-width: $breakat_large) {
+    font-size: $size / 1.75;
+  }
+}
+
+// ----- Layout ---------------------------------------------------------------
+// page breaks
+$breakat_large: 1200px;
+$breakat_small: 768px;
+// blocks
+$center_block_width: 40%;
+$side_block_width: (100% - $center_block_width) / 2;
+$spacer_block_width: 50% - $side_block_width;
+
+
+.pane {
+  // only control height and positioning when large enough
+  @media screen and (min-width: $breakat_large) {
+    // Overfill page so the whole screen can be filled with color easily
+    height: 110%;
+    // ... but don't overfill the first and last
+    &:first-of-type,
+    &:last-of-type {
+      height: 100%;
+    }
+
+    // Ensure that there's always enough height
+    min-height: 700px;
+
+    // needed so that .blocks can be positioned absolutely
+    position: relative;
+
+    p {
+      width: 450px;
+    }
+  }
+  @media screen and (max-width: $breakat_large) {
+    min-height: 110%;
+    padding: 30px 20px;
+
+    &.landing {
+      padding-top: 165px;
+    }
+  }
+}
+
+// position main content relative to the pane
+.blocks {
+  @media screen and (min-width: $breakat_large) {
+    position: absolute;
+    bottom: 12%;
+    height: 50%;
+    width: 100%;
+  }
+  @media screen and (max-width: $breakat_large) {
+    margin-top: 70px;
+  }
+}
+
+.block {
+  display: block;
+
+  @media screen and (min-width: $breakat_large) {
+    // Takes up 50% of (.blocks @ 50%) = 25% of viewport
+    height: 50%;
+
+    // So we can push and pull blocks around
+    float: left;
+    position: relative;
+
+    // block sizing
+    &.center {
+      width: $center_block_width;
+      // push left
+      left: $side_block_width;
+    }
+    &.side {
+      width: $side_block_width;
+    }
+    &.center + &.side {
+      // pull first side block after center block back to the right
+      right: $center_block_width;
+    }
+    &.spacer {
+      width: $spacer_block_width;
+    }
+  }
+  @media screen and (max-width: $breakat_large) {
+    width: 100%;
+  }
+}
+
+// ----- Colors ---------------------------------------------------------------
+$blue02: #021828;
+$blue01: #042844;
+$blue0: #0B3C61;
+$blue1: #0F4A78;
+$blue2: #0B5A97;
+
+// color scheme:
+// http://paletton.com/#uid=53x0X0kuiiUvNtru4nlwudexs7O
+
+.pane {
+  // background
+  &.landing {
+    background: $blue0;
+  }
+  &.experience {
+    background: $blue2;
+  }
+  &.projects {
+    background: $blue01;
+  }
+  &.reading {
+    background: $blue1;
+  }
+  &.writing {
+    background: $blue02;
+  }
+  &.about {
+    background: $blue0;
+  }
+  // darken image link backgrounds on hover
+  a img:hover {
+    background: rgba(0,0,0,0.1);
+  }
+
+  a h2:hover,
+  h2 a:hover, {
+    font-weight: 300;
+  }
+}
+
+// ----- Typography -----------------------------------------------------------
+.pane {
+  .title,
+  .subtitle,
+  h1,
+  h2,
+  a,
+  p {
+    font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+    line-height: 1.5;
+    text-align: center;
+    position: relative;
+    font-weight: 200;
+  }
+
+  .title {
+    @media screen and (min-width: $breakat_large) { font-size: 6rem; }
+    @media screen and (max-width: $breakat_large) { font-size: 3rem; }
+  }
+
+  .subtitle {
+    @media screen and (min-width: $breakat_large) { font-size: 2.5rem; }
+    @media screen and (max-width: $breakat_large) { font-size: 1.75rem; }
+  }
+
+  h1 {
+    @media screen and (min-width: $breakat_large) { font-size: 5rem; }
+    @media screen and (max-width: $breakat_large) { font-size: 2.5rem; }
+    top: 15%;
+  }
+
+  h2 {
+    @media screen and (min-width: $breakat_large) { font-size: 3rem; }
+    @media screen and (max-width: $breakat_large) { font-size: 2rem; }
+    margin-top: 20px;
+  }
+
+  .logo {
+    // Make image as large as possible while maintaining aspect ratio
+    width: 100%;
+    max-height: 100%;
+    // If image width is not 100%, center it
+    display: block;
+    margin: 0 auto;
+    @media screen and (max-width: $breakat_large) { max-height: 25%; }
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 1.25rem;
+
+    a {
+      font-weight: inherit;
+      font-size: inherit;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
