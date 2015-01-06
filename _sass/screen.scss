@@ -9,128 +9,21 @@ body {
   height: 100%;
 }
 
-// ----- Layout ---------------------------------------------------------------
-.pane-slider {
-  height: 100%;
-  position: relative;
-  overflow-x: hidden;
-}
+// ----- Colors ---------------------------------------------------------------
+$blue02: #021828;
+$blue01: #042844;
+$blue0: #0B3C61;
+$blue1: #0F4A78;
+$blue2: #0B5A97;
+
+// color scheme:
+// http://paletton.com/#uid=53x0X0kuiiUvNtru4nlwudexs7O
+// ----------------------------------------------------------------------------
 
 .pane {
   height: 100%;
 
-  box-sizing: border-box;
-  padding-top: 5%;
-  padding-bottom: 5%;
-
-  position: relative;  // needed for both scroll hints and sliding
-  &.explanation {
-    position: absolute;
-    top: 0;
-  }
-
-  .heading {
-    height: 15%;
-  }
-  .main {
-    height: 50%;
-
-    .block {
-      height: 66%;
-      box-sizing: border-box;
-      padding: 4%;
-      @include border-radius(12px);
-
-      img {
-        height: 100%;
-      }
-
-      &:hover {
-        background: rgba(0,0,0,0.1);
-      }
-    }
-  }
-  .other {
-    //position: absolute;
-    //bottom: 30px;
-    width: 1100px;
-    height: 25%;
-    //left: 0;
-    //right: 0;
-    margin-left: auto;
-    margin-right: auto;
-
-    .block {
-      height: 100%;
-      width: 23%;
-      margin: 0 1%;
-      float: left;
-      padding: 20px;
-      box-sizing: border-box;
-      position: relative;
-      @include border-radius(12px);
-
-      img {
-        width: 100%;
-      }
-
-      &:hover {
-        background: rgba(0,0,0,0.1);
-      }
-    }
-  }
-}
-
-.explanation .main {
-  height: 75%;
-
-  p {
-    width: 45%;
-    font-weight: 300;
-    font-size: 1.4rem;
-    line-height: 2;
-    text-align: justify;
-  }
-}
-
-// ----- slider -----
-$gap: 8%;
-
-.pane {
-  // ----- main pane -----
-  @include transition-property(left);
-  @include transition-duration(0.5s);
-  @include transition-timing-function(cubic-bezier(0,0,.4,1));
-  left: 0;  // initial
-
-  &.clicked {
-    // final
-    left: -100% + $gap;
-
-    &:not(.explanation) {
-      cursor: pointer;
-    }
-  }
-
-  // ----- explanation pane -----
-  &.explanation {
-    // initial
-    left: 100%;
-    width: 100% - $gap;
-
-    &.clicked {
-      // final
-      left: $gap;
-    }
-  }
-}
-
-.push1 {
-  left: 25%;
-}
-
-.pull2 {
-  right: 50%;
+  &.landing { background: $blue0; }
 }
 
 .vcenter {
@@ -159,57 +52,13 @@ a.icon {
   }
 }
 
-.scroll-hint {
-  // position absolute so that we can put it at the bottom
+.under-construction {
   position: absolute;
-  bottom: 25px;
-
-  // center it
-  left: 0;
+  width: 180px;
+  height: 180px;
+  top: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
-
-  // typography
-  font-size: 1.5rem;
-  font-weight: 200;
-  color: white;
-
-  // animate
-  opacity: 0;                              // initially hidden
-  @include animation-name(fadein);
-  @include animation-delay(1s);            // start 1s after page load
-  @include animation-duration(1s);
-  @include animation-fill-mode(forwards);  // persist end state
-  @include keyframes(fadein) {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
 }
-
-
-// ----- Colors ---------------------------------------------------------------
-$blue02: #021828;
-$blue01: #042844;
-$blue0: #0B3C61;
-$blue1: #0F4A78;
-$blue2: #0B5A97;
-
-// color scheme:
-// http://paletton.com/#uid=53x0X0kuiiUvNtru4nlwudexs7O
-
-.pane {
-  // cycle forward by 2 shades every pane, regardless of content
-  &.landing { background: $blue0; }
-  &.experience { background: $blue2; }
-  &.projects { background: $blue01; }
-  &.reading { background: $blue1; }
-  &.writing { background: $blue02; }
-  &.about { background: $blue0; }
-
-  &.explanation { background: #383838; }
-}
-
 
 // ----- Typography -----------------------------------------------------------
 .pane {
@@ -220,20 +69,20 @@ $blue2: #0B5A97;
   font-weight: 200;
   a { color: #fff; }
 
-  .title {
-    font-size: 6rem;
+  @media(max-width: 768px) {
+    .title { font-size: 3rem; }
+    .links { font-size: 1.5rem; }
   }
-
-  .links {
-    font-size: 2.5rem;
+  @media(min-width: 768px) {
+    .title { font-size: 4rem; }
+    .links { font-size: 1.75rem; }
   }
-
-  h1 {
-    font-size: 5rem;
+  @media(min-width: 992px) {
+    .title { font-size: 5rem; }
+    .links { font-size: 2rem; }
   }
-
-  h2 { // might want to differentiate this according to main/other
-    line-height: 1;
-    font-size: 2.8rem;
+  @media(min-width: 1200px) {
+    .title { font-size: 6rem; }
+    .links { font-size: 2.5rem; }
   }
 }
