@@ -16,12 +16,6 @@ html
 
     link(rel="canonical", href="https://jez.io/")
 
-    script
-      :coffee
-        # Force redirect to HTTPS
-        if window.location.hostname != 'localhost' and window.location.protocol != 'https:'
-          window.location.protocol = 'https'
-
   body
     .landing.pane.vcenter
       .vcenter-target
