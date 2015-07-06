@@ -9,7 +9,7 @@ html
     meta(name="description", content="Computer Science student, open source enthusiast, command line junkie, writer.")
 
     //- See also: /favicon.ico
-    link(rel="icon", href="/favicon.png")
+    link(rel="icon", href="/img/favicon.png")
 
     link(rel="stylesheet", href="/css/screen.css")
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
@@ -34,3 +34,5 @@ html
             i.fa.fa-file-pdf-o
       a.under-construction(href="https://github.com/jez/jez.github.io")
         img(src="/images/under-construction.svg")
+    .pane
+      include:marked site-content.md

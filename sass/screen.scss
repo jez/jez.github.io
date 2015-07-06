@@ -1,7 +1,4 @@
-@import 'compass/reset';
-@import 'compass/css3/border-radius';
-@import 'compass/css3/animation';
-@import 'compass/css3/transition';
+@import 'reset';
 @import url(https://fonts.googleapis.com/css?family=Raleway:200,300);
 
 html,
@@ -45,7 +42,7 @@ $blue2: #0B5A97;
 a.icon {
   margin: 2px;
   padding: 15px;
-  @include border-radius(8px);
+  border-radius: 8px;
 
   &:hover {
     background: rgba(0,0,0,0.1);
