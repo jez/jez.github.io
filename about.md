@@ -39,12 +39,6 @@ also enjoy giving back to [open source projects I use][oss-repos].
 
 > "Open the encyclopedia. Open the dictionary. Open your mind."
 >
-> "You’ve got to get the fundamentals down, because otherwise the fancy stuff is
-> not going to work."
->
-> "Know what you don’t know, be willing to admit it, and don’t leave until you
-> understand."
->
 > Randy Pausch, _The Last Lecture_
 
 Sharing my talents and knowledge with others thrills me. I've been a teaching
