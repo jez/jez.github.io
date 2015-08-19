@@ -3,7 +3,7 @@
 > Why is programming fun? What delights may it's practitioner expect as his
 > reward?
 >
-> Fred Brooks, [_The Mythical Man-Month_][man-month]
+> Fred Brooks, _The Mythical Man-Month_
 
 <!-- TODO: make this better -->
 
@@ -12,20 +12,20 @@ towards programming. I absolutely love working on projects, whether alone or
 with others. Over time I've accumulated a portfolio of projects that I'm
 particularly proud of.
 
-[Autolab][autolab] is a project I joined recently and now regularly contribute
-to. It aims to vastly improve the process of teaching programming-based computer
-science classes through "autograding," allowing instructors to spend more time
-educating.
+- [Autolab][autolab] is a project I joined recently and now regularly contribute
+  to. It aims to vastly improve the process of teaching programming-based
+  computer science classes through "autograding," allowing instructors to spend
+  more time educating.
 
-[TeXDown][texdown] was a small experiment to build an online note-taking app
-that combines the expressiveness of Markdown, the power of LaTeX, and the
-editing speed of Vim. After building it, I realized I preferred alternative
-methods of note-taking, but it's still a nifty little project that I'm very fond
-of.
+- [TeXDown][texdown] was a small experiment to build an online note-taking app
+  that combines the expressiveness of Markdown, the power of LaTeX, and the
+  editing speed of Vim. After building it, I realized I preferred alternative
+  methods of note-taking, but it's still a nifty little project that I'm very
+  fond of.
 
-[TuneMachine][tunemachine] started out as a hackathon project. It aims to be a
-"time machine for your Spotify tunes." It's built with CoffeeScript and
-React--my two favorite web technologies at the moment.
+- [TuneMachine][tunemachine] started out as a hackathon project. It aims to be a
+  "time machine for your Spotify tunes." It's built with CoffeeScript and
+  React---my two favorite web technologies at the moment.
 
 This collection of projects only scratches the surface; some of my "smaller"
 projects are actually the most interesting. I've created or contributed to a
@@ -35,7 +35,7 @@ worked on some really cool [Carnegie Mellon-specific projects][cmu-repos]. I
 also enjoy giving back to [open source projects I use][oss-repos].
 
 
-# I believe strongly in education and fostering community.
+# I believe strongly in education.
 
 > "Open the encyclopedia. Open the dictionary. Open your mind."
 >
@@ -45,7 +45,7 @@ also enjoy giving back to [open source projects I use][oss-repos].
 > "Know what you don’t know, be willing to admit it, and don’t leave until you
 > understand."
 >
-> Randy Pausch, [_The Last Lecture_][last-lecture]
+> Randy Pausch, _The Last Lecture_
 
 Sharing my talents and knowledge with others thrills me. I've been a teaching
 assistant for [15-150 Functional Programming][150] and [15-131 Great Practical
@@ -84,39 +84,41 @@ Teaching has always been a passion of mine, and I get to live it out every day.
 > Without writing, you are reduced to a finite automaton.<br>
 > With writing you have the extraordinary power of a Turing machine.
 >
-> Manuel Blum, [_Advice to a Beginning Graduate Student_][advice]
+> Manuel Blum, _Advice to a Beginning Graduate Student_
 
 Writing is a way for me to collect my thoughts, distill my knowledge, and share
 my discoveries with others. I publish my writings at [Bits, Bytes, and
 Words][blog], my personal blog, and occasionally at the [Autolab Development
 Blog][autolab-blog]. For the curious, here's a sampling of my posts.
 
-[Autolab: Autograding for All][autograding] is a piece written for the Autolab
-blog outlining the benefits of autograding and how it improves student learning
-in computer science classrooms.
+- [Autolab: Autograding for All][autograding] is a piece written for the Autolab
+  blog outlining the benefits of autograding and how it improves student
+  learning in computer science classrooms.
 
-[Noteworthy Dotfile Hacks][dotfile-hacks] dissects my sophisticated [dotfiles
-setup][dotfiles] to place the interesting parts at the forefront, making it
-easier for others to incorporate the interesting bits into their setups as well.
+- [Noteworthy Dotfile Hacks][dotfile-hacks] dissects my sophisticated [dotfiles
+  setup][dotfiles] to place the interesting parts at the forefront, making it
+  easier for others to incorporate the interesting bits into their setups as
+  well.
 
-[Google Chrome: A Memory Hog][chromemem] walks through the process of
-constructing a bash-oneliner, emphasizing their usefulness in solving rather
-complicated tasks. I use the contents of this article as an example when
-teaching [Great Practical Ideas][131].
+- [Google Chrome: A Memory Hog][chromemem] walks through the process of
+  constructing a bash-oneliner, emphasizing their usefulness in solving rather
+  complicated tasks. I use the contents of this article as an example when
+  teaching [Great Practical Ideas][131].
 
-[Ruby Virtualenvs][ruby-virtualenvs] solves a long-time problem I've had about
-Ruby gems. By default, the Ruby `bundle` command to install gems provides no
-sandboxing of dependencies between projects. Through clever use of the Python
-`virtualenvwrapper` package, we can elegantly solve this problem using existing
-tools.
+- [Ruby Virtualenvs][ruby-virtualenvs] solves a long-time problem I've had about
+  Ruby gems. By default, the Ruby `bundle` command to install gems provides no
+  sandboxing of dependencies between projects. Through clever use of the Python
+  `virtualenvwrapper` package, we can elegantly solve this problem using
+  existing tools.
 
 
-# I'm living the intern experience.
+# I mix work and passion.
 
-> "... but I like what is in the work--the chance to find yourself. Your own reality--for yourself"
+> "... but I like what is in the work---the chance to find yourself. Your own
+> reality---for yourself"
 >
-> Joseph Conrad, [_Heart of Darkness_][heart]
->
+> Joseph Conrad, _Heart of Darkness_
+
 > "My heart is in the work."
 >
 > Andrew Carnegie
@@ -125,28 +127,23 @@ I've had two wonderful opportunities for summer software engineering
 internships. Through them, I've been able to discover my talents and
 preferences, meet new friends, and enjoy myself.
 
-At [Bloomberg][bloomberg] I worked on an internal financial simulation tool in
-C++ that enabled developers to prototype and test their apps. I got the
-opportunity to participate in the design, implementation, testing, and
-deployment of a complete project, which was invaluable as a rising sophomore.
+- At [Bloomberg][bloomberg] I worked on an internal financial simulation tool in
+  C++ that enabled developers to prototype and test their apps. I got the
+  opportunity to participate in the design, implementation, testing, and
+  deployment of a complete project, which was invaluable as a rising sophomore.
 
-At [Dropbox][dropbox] I worked on some super-secret unreleased stuff! When it
-releases I'll be sure to elaborate, but suffice it to say that it lit up the
-room when I would demo my feature. I worked primarily using TypeScript and
-React.
+- At [Dropbox][dropbox] I worked on some super-secret unreleased stuff! When it
+  releases I'll be sure to elaborate, but suffice it to say that it lit up the
+  room when I would demo my feature. I worked primarily using TypeScript and
+  React.
 
 Having lived in both New York and San Francisco, I'm still undecided on where
 I'd like to move when I graduate college in 2017. I'm a Midwesterner at heart,
 but I enjoy being close to my college and intern friends on the coasts.
 Regardless of where I work, though, I hope to find somewhere I can work doing
-all the things I've discussed here--the things I love.
+all the things I've discussed here---the things I love.
 
 
-
-[man-month]: https://en.wikipedia.org/wiki/The_Mythical_Man-Month
-[advice]: http://www.cs.cmu.edu/~mblum/research/pdf/grad.html
-[last-lecture]: http://www.cmu.edu/randyslecture/
-[heart]: https://en.wikipedia.org/wiki/Heart_of_Darkness
 
 [autolab]: https://github.com/autolab/Autolab
 [texdown]: https://github.com/bezi/texdown

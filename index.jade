@@ -6,7 +6,7 @@ html
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
 
     title Jake Zimmerman
-    meta(name="description", content="Computer Science student, open source enthusiast, command line junkie, writer.")
+    meta(name="description", content="Computer Science student, web developer, open source enthusiast, command line junkie, writer.")
 
     //- See also: /favicon.ico
     link(rel="icon", href="/img/favicon.png")
@@ -17,7 +17,7 @@ html
     link(rel="canonical", href="https://jez.io/")
 
   body
-    .landing.pane.vcenter
+    .landing-pane.vcenter
       .vcenter-target
         .title Jake Zimmerman
         .links
@@ -32,7 +32,6 @@ html
           | &nbsp;
           a.icon(href="/resume/")
             i.fa.fa-file-pdf-o
-      a.under-construction(href="https://github.com/jez/jez.github.io")
-        img(src="/images/under-construction.svg")
-    .pane
-      include:marked site-content.md
+    .content#about
+      .wrapper
+        include:marked(smartypants=true) about.md

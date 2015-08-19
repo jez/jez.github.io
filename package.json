@@ -3,16 +3,19 @@
   "version": "0.0.0",
   "description": "Computer Science student, web developer, open source enthusiast, command line junkie, writer.",
   "dependencies": {
-    "del": "^1.2.0",
+    "coffee-script": "^1.9.3",
+    "del": "^1.2.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
-    "gulp-jade": "^1.0.1",
-    "gulp-sass": "^2.0.3",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "jade": "^1.11.0",
+    "jstransformer-marked": "^1.0.1"
   },
   "scripts": {
-    "start": "http-server ./site -p 8000 -i False",
+    "start": "http-server ./site -p 6771 -i False",
     "postinstall": "gulp",
     "build": "gulp",
     "watch": "gulp watch",
