@@ -16,6 +16,19 @@ html
 
     link(rel="canonical", href="https://jez.io/")
 
+    script
+      :coffee-script
+        # bling.coffee
+        window.$ = document.querySelector.bind document
+        Node.prototype.on = window.on = (name, fn) ->
+          this.addEventListener name, fn
+        NodeList.prototype.__proto__ = Array.prototype
+        NodeList.prototype.on = NodeList.prototype.addEventListener = (name, fn) ->
+          @forEach (elem, i) -> elem.on name, fn
+
+        window.on 'DOMContentLoaded', ->
+          pane = $('.landing-pane')
+          pane.style.height = '' + pane.clientHeight + 'px'
   body
     .landing-pane.vcenter
       .vcenter-target
