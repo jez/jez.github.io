@@ -36,7 +36,7 @@ Octopress does. First, to set up:
 git clone -b master https://github.com/jez/jez.github.io ./site
 ```
 
-Then, to deploy:
+Then, to deploy (after building):
 
 ```
 npm run deploy
