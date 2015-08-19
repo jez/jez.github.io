@@ -136,8 +136,8 @@ preferences, meet new friends, and enjoy myself.
 Having lived in both New York and San Francisco, I'm still undecided on where
 I'd like to move when I graduate college in 2017. I'm a Midwesterner at heart,
 but I enjoy being close to my college and intern friends on the coasts.
-Regardless of where I work, though, I hope to find somewhere I can work by
-living out my passions.
+Regardless of where I work, though, I hope to find somewhere I can live out my
+passions.
 
 
 [autolab]: https://github.com/autolab/Autolab
