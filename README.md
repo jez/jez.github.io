@@ -39,7 +39,11 @@ git clone -b master https://github.com/jez/jez.github.io ./site
 Then, to deploy:
 
 ```
-cd ./site && git commit -am "Updated site" && git push origin master && cd -
+npm run deploy
+
+# which just runs:
+
+cd ./site && git commit -am "Updated site - $(date)" && git push origin master && cd -
 ```
 
 Whoaaa!!! Amazing!

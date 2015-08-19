@@ -22,7 +22,8 @@
     "clean": "gulp clean",
     "styles": "gulp styles",
     "jade": "gulp jade",
-    "public": "gulp public"
+    "public": "gulp public",
+    "deploy": "cd ./site && git commit -am \"Updated site - $(date)\" && git push origin master && cd -"
   },
   "repository": {
     "type": "git",
