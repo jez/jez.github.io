@@ -1,6 +1,6 @@
 # I delight in making, creating, and exploring.
 
-> Why is programming fun? What delights may it's practitioner expect as his
+> Why is programming fun? What delights may its practitioner expect as his
 > reward?
 >
 > Fred Brooks, _The Mythical Man-Month_
