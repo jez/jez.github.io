@@ -43,7 +43,7 @@ npm run deploy
 
 # which just runs:
 
-cd ./site && git commit -am "Updated site - $(date)" && git push origin master && cd -
+cd ./site && git add -A && git commit -m "Updated site - $(date)" && git push origin master && cd -
 ```
 
 Whoaaa!!! Amazing!

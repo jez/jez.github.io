@@ -24,7 +24,7 @@
     "styles": "gulp styles",
     "jade": "gulp jade",
     "public": "gulp public",
-    "deploy": "cd ./site && git commit -am \"Updated site - $(date)\" && git push origin master && cd -"
+    "deploy": "cd ./site && git add -A && git commit -m \"Updated site - $(date)\" && git push origin master && cd -"
   },
   "repository": {
     "type": "git",
