@@ -37,7 +37,7 @@ also enjoy giving back to [open source projects I use][oss-repos].
 
 # I believe strongly in education.
 
-> "Open the encyclopedia. Open the dictionary. Open your mind."
+> Open the encyclopedia. Open the dictionary. Open your mind.
 >
 > Randy Pausch, _The Last Lecture_
 
@@ -108,14 +108,14 @@ Blog][autolab-blog]. For the curious, here's a sampling of my posts.
 
 # I mix work and passion.
 
-> "... but I like what is in the work---the chance to find yourself. Your own
-> reality---for yourself"
+> ... but I like what is in the work---the chance to find yourself. Your own
+> reality---for yourself
 >
 > Joseph Conrad, _Heart of Darkness_
 
 <!-- -->
 
-> "My heart is in the work."
+> My heart is in the work.
 >
 > Andrew Carnegie
 
