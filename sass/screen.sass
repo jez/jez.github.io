@@ -1,6 +1,7 @@
 @import reset
 @import link-underlines
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond)
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i')
 
 // ----- Colors ---------------------------------------------------------------
 $blue02: #021828
@@ -79,6 +80,7 @@ a.icon
   blockquote
     padding: 0 35px
     margin-bottom: 2rem
+    font-family: 'Crimson Text', Georgia, serif;
     font-style: italic
 
     em
@@ -97,6 +99,9 @@ a.icon
   a
     @include linkUnderlines($bg-color-dark, $fg-color)
 
+  em
+    font-family: 'Crimson Text', Georgia, serif
+    font-style: italic
 
 // responsive queries
 .landing-pane
