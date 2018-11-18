@@ -5,10 +5,7 @@ all: rm-r public $(html)
 
 .PHONY: deploy
 deploy:
-	cd ./site
-	git add -A
-	git commit -m "Updated site - $$(date)"
-	git push origin master
+	cd ./site && git add -A && git commit -m "Updated site - $$(date)" && git push origin master
 
 .PHONY: rm-r
 rm-r:
