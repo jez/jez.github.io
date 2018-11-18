@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/jez_
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jez.io
+  * I am jez_ (https://keybase.io/jez_) on keybase.
+  * I have a public key with fingerprint 8C29 8E1B 739D 2455 4F44  8AA3 8FA2 EB01 DEDE 40C0
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101aee2f2d53ea563f0161d0f8dc25ae99f96a351dc35db14a708e29654e2590ad80a",
+            "fingerprint": "8c298e1b739d24554f448aa38fa2eb01dede40c0",
+            "host": "keybase.io",
+            "key_id": "8fa2eb01dede40c0",
+            "kid": "0101aee2f2d53ea563f0161d0f8dc25ae99f96a351dc35db14a708e29654e2590ad80a",
+            "uid": "86c37557b3e90a104819b427f5a47919",
+            "username": "jez_"
+        },
+        "service": {
+            "hostname": "jez.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1500070363,
+    "expire_in": 157680000,
+    "prev": "5ca8fa158c03b1c0deabda13015cc6c3a1ed01e5a7e357946b576d7ef8b245f2",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.73
+Comment: https://keybase.io/crypto
+
+yMIfAnicrVJdSBRRGN3NXMk/pHoQiqSJfMi/e2fm7sxs9iAaRWWRUWEa2525d9zJ
+mll3x9VtMct8ihZ9CcSXJU2koqcVrYS0jH4opK2HKKWfh0jDMgkkKqg7VvTSY0+X
++33nnO+c7947OWmuTHdsYCboaVlMuh/eije7ao2KqRinWiTK+WJcI1066DFCw7a/
+0SCcjwMQQEwpr/MECRQjr6AD6IUE6DLReISpouiKFwsIEk1ARIUiloBMecWLRMoj
+BWAiA8wVc7phNtBQMGSYNpOVNV6RKVQlQSG8iJCoi6KMsSDrmKcqgIQSKgINMGLA
+CjsMZk7FYVpqWKzGLv4le//A/2ffzb/meDVBQkhSBcpaEIgyVFSRl3SERUmBigMM
+05CJj1OGPkpP+Lm2Yo5VIoZGnaU6Kf52f6UIhizb0qxjrBaw7WDY53DsaNABtVDV
+/5vuVw2TsO0xRoSGwoZlcj7IkJptOHoQAQAkIHiFYo62Bo0Q9RsOAklemXWAM4dG
+mCTSMFsXRLIGBBVqgFCsEgwFAJGmsXwYUgIgRViiApIU0asyCSJRXVbZE+k85wRq
+Mi3OJzObuIFJho0GE9vNIcq13R6vX+5yZ7o86cucX+XKXJH356/xnowfO54Fq3PS
+xmpyhr4W3Ry6ka1sTB08c69/euTNtYKipsGF5Cdpat263kCh2uvPf7+9c1M8PXX1
+uzvrzpPVz0uqz1/PXZyf3xeta1nlSX2evTQ/uvBlZnrZkPXu4/jsi2h8MvY1mJvV
+ZSYqXtlvP5s1E693q/CNkdi3q3CgoGqwSRg+O39ga+Vo+ebDLycLE/F09VS4q/7I
+1KGJ9thw2U55y8rF2cjoWP+GvY9HegLnrozcdd/vaP40V1m2rWN9pLS1crq8tqe7
+oyowc3osb67kZN+Dd9/z91y5fHF/+WS8Oz9PzBh+2pf2ov3bg0fJzA9HucSFTo8v
+1Zodr8tYuzCXzF2T/AldrkKh
+=XeOv
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jez_
+
+==================================================================
+
