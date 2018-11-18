@@ -1,11 +1,33 @@
-# I delight in making, creating, and exploring.
+---
+title: Jake Zimmerman
+description: Computer Science student, web developer, open source enthusiast, command line junkie, writer.
+css:
+  - /css/main.css
+header-includes: []
+include-before: []
+include-after: []
+# TODO(jez)
+# - content
+# - test page
+# - .numberLines
+# - tables
+# - use css variables
+# - light theme optionally
+---
+
+# Jake Zimmerman
+
+- [Email](mailto:jake@zimmerman.io)
+- [GitHub](https://github.com/jez)
+- [Blog](http://blog.jez.io)
+- [Resume](/resume/)
+
+## I delight in making, creating, and exploring.
 
 > Why is programming fun? What delights may its practitioner expect as his
 > reward?
 >
 > Fred Brooks, _The Mythical Man-Month_
-
-<!-- TODO: make this better -->
 
 Between school, hackathons, and my free time, I always find myself gravitating
 towards programming. I absolutely love working on projects, whether alone or
@@ -34,8 +56,7 @@ number of [Vim][vim-repos] and [LaTeX][latex-repos] repos, done a fair bit of
 worked on some really cool [Carnegie Mellon-specific projects][cmu-repos]. I
 also enjoy giving back to [open source projects I use][oss-repos].
 
-
-# I believe strongly in education.
+## I believe strongly in education.
 
 > Open the encyclopedia. Open the dictionary. Open your mind.
 >
@@ -66,7 +87,7 @@ experienced.
 Teaching has always been a passion of mine, and I get to live it out every day.
 
 
-# I reflect on what I've learned.
+## I reflect on what I've learned.
 
 > You are all computer scientists.<br>
 > You know what FINITE AUTOMATA can do.<br>
@@ -107,7 +128,7 @@ Blog][autolab-blog]. For the curious, here's a sampling of my posts.
   impact, and importance, as well as how it related to the Apple v. FBI case.
 
 
-# I mix work and passion.
+## I mix work and passion.
 
 > ... but I like what is in the work---the chance to find yourself. Your own
 > reality---for yourself
