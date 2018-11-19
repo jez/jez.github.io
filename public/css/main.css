@@ -156,7 +156,7 @@ blockquote p:last-child {
 blockquote em {
   font-style: normal;
 }
-blockquote:after {
+blockquote::after {
   content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";
   white-space: pre;
   position: absolute;
@@ -186,21 +186,21 @@ ol > li {
   padding-left: 4ch;
 }
 
-li:after {
+li::after {
   position: absolute;
   top: 0;
   left: 0;
   color: var(--solarized-blue);
 }
 
-ul > li:after {
+ul > li::after {
   content: '•';
 }
 
 ol {
   counter-reset: ol;
 }
-ol > li:after {
+ol > li::after {
   content: counter(ol) ".";
   counter-increment: ol;
 }
@@ -212,7 +212,7 @@ hr {
   border: 0;
 }
 
-hr:after {
+hr::after {
   content: '- - - - -';
   position: absolute;
   top: 0;
