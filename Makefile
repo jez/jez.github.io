@@ -21,7 +21,9 @@ watch:
 serve:
 	cd ./site && python3 -m http.server
 
-
+# TODO(jez) I don't know how to ensure that removing a file from src/ or
+# public/ will remove it from the site/ folder without wiping the folder
+# before every build.
 .PHONY: rm-r
 rm-r:
 	rm -rfv site/*
