@@ -20,6 +20,7 @@
 <main>
 <h1 id="header-1">Header 1</h1>
 <p>This is a test page designed to be used during development, to make sure that the custom CSS covers all the kinds of Markdown Pandoc supports. For example, this text <strong>should be bold</strong> and this text <em>should be italic</em>. Meanwhile, this represents <code>inline code</code> and this represents a <a href="#">hyperlink</a>.</p>
+<p>You might also want to <a href="#" id="toggle-theme">toggle the colorscheme</a>.</p>
 <p>These are unicode box-drawing characters:<br />
 ┌───┐<br />
 │ × │<br />
@@ -87,5 +88,26 @@ Do they overlap? Are there gaps?</p>
 <hr />
 <p>How do emoji render? 🤔 👌 🚀</p>
 </main>
+<script>
+const useLightTheme = () => {
+  const stored = window.localStorage.getItem('useLightTheme');
+  if (stored == null) {
+    return false;
+  } else {
+    return JSON.parse(stored);
+  }
+}
+
+if (useLightTheme()) {
+  document.querySelector('html').classList.toggle('solarized-light');
+}
+
+document.getElementById('toggle-theme').addEventListener('click', (ev) => {
+  ev.preventDefault();
+  const current = useLightTheme();
+  window.localStorage.setItem('useLightTheme', !current);
+  document.querySelector('html').classList.toggle('solarized-light');
+});
+</script>
 </body>
 </html>

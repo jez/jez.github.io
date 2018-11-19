@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Jake Zimmerman</title>
-  <meta name="description" content="Computer Science student, web developer, open source enthusiast, command line junkie, writer." />
+  <meta name="description" content="Types enthusiast. I write code and blog." />
   <link rel="icon" href="/img/favicon.png">
   <link rel="canonical" href="https://jez.io">
   <style type="text/css">
@@ -26,6 +26,7 @@
 <li>my <a href="/resume/">resume</a></li>
 </ul>
 <p>If you want to contact me, I prefer <a href="mailto:jake@zimmerman.io">email</a> or <a href="https://jez.io/thoughts/on-leaving-facebook/">text message</a>.</p>
+<p>You might also want to <a href="#" id="toggle-theme">toggle the colorscheme</a>.</p>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <h2 id="contents">Contents</h2>
@@ -136,5 +137,26 @@ Some selected articles:</p>
 </ul>
 <hr />
 </main>
+<script>
+const useLightTheme = () => {
+  const stored = window.localStorage.getItem('useLightTheme');
+  if (stored == null) {
+    return false;
+  } else {
+    return JSON.parse(stored);
+  }
+}
+
+if (useLightTheme()) {
+  document.querySelector('html').classList.toggle('solarized-light');
+}
+
+document.getElementById('toggle-theme').addEventListener('click', (ev) => {
+  ev.preventDefault();
+  const current = useLightTheme();
+  window.localStorage.setItem('useLightTheme', !current);
+  document.querySelector('html').classList.toggle('solarized-light');
+});
+</script>
 </body>
 </html>

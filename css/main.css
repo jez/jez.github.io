@@ -1,3 +1,43 @@
+/* TODO(jez) Support pandoc .numberLines */
+/* TODO(jez) Support pandoc tables */
+/* TODO(jez) Support pandoc footnotes */
+
+html {
+  --solarized-base03:    #002b36;
+  --solarized-base02:    #073642;
+  --solarized-base01:    #586e75;
+  --solarized-base00:    #657b83;
+  --solarized-base0:     #839496;
+  --solarized-base1:     #93a1a1;
+  --solarized-base2:     #eee8d5;
+  --solarized-base3:     #fdf6e3;
+  --solarized-yellow:    #b58900;
+  --solarized-orange:    #cb4b16;
+  --solarized-red:       #dc322f;
+  --solarized-magenta:   #d33682;
+  --solarized-violet:    #6c71c4;
+  --solarized-blue:      #268bd2;
+  --solarized-cyan:      #2aa198;
+  --solarized-green:     #859900;
+
+  --solarized-base03-99: rgba(0, 43, 54, 0.99);
+  --solarized-base02-99: rgba(7, 54, 66, 0.99);
+}
+
+html.solarized-light {
+  --solarized-base03:    #fdf6e3;
+  --solarized-base02:    #eee8d5;
+  --solarized-base01:    #93a1a1;
+  --solarized-base00:    #839496;
+  --solarized-base0:     #657b83;
+  --solarized-base1:     #586e75;
+  --solarized-base2:     #073642;
+  --solarized-base3:     #002b36;
+
+  --solarized-base03-99: rgba(253, 246, 227, 0.99);
+  --solarized-base02-99: rgba(238, 232, 213, 0.99);
+}
+
 *,
 *::before,
 *::after {
@@ -9,8 +49,8 @@
 
 html,
 body {
-  background: #002b36;
-  color: #839496;
+  background: var(--solarized-base03);
+  color: var(--solarized-base0);
   font-size: 14px;
   /* Largest value of line height such that box-drawing characters touch. */
   line-height: 1.35;
@@ -19,7 +59,7 @@ body {
 }
 
 ::selection {
-  background: rgba(7, 54, 66, 0.99);
+  background: var(--solarized-base02-99);
 }
 
 main {
@@ -38,7 +78,7 @@ h5,
 h6 {
   font-size: 1rem;
   margin: 1.35rem 0;
-  color: #cb4b16;
+  color: var(--solarized-orange);
   font-weight: normal;
 }
 
@@ -58,7 +98,7 @@ h3::before,
 h4::before,
 h5::before,
 h6::before {
-  color: #859900;
+  color: var(--solarized-green);
 }
 
 h1::before { content: '# '; }
@@ -73,20 +113,20 @@ p {
 }
 
 strong {
-  color: #cb4b16;
+  color: var(--solarized-orange);
   font-weight: normal;
 }
 
 code {
-  color: #2aa198;
+  color: var(--solarized-cyan);
 }
 
 a {
-  color: #859900;
+  color: var(--solarized-green);
   text-decoration: none;
 }
 a:hover {
-  color: #6c71c4;
+  color: var(--solarized-violet);
 }
 a:not(.sourceLine)::before {
   content: '[';
@@ -96,7 +136,7 @@ a:not(.sourceLine)::after {
 }
 a:hover::before,
 a:hover::after {
-  color: #859900;
+  color: var(--solarized-green);
 }
 
 blockquote {
@@ -104,7 +144,7 @@ blockquote {
   position: relative;
   padding-left: 2ch;
   overflow: hidden;
-  color: #268bd2;
+  color: var(--solarized-blue);
   font-style: italic;
 }
 blockquote p:first-child {
@@ -150,7 +190,7 @@ li:after {
   position: absolute;
   top: 0;
   left: 0;
-  color: #268bd2;
+  color: var(--solarized-blue);
 }
 
 ul > li:after {
@@ -181,7 +221,7 @@ hr:after {
   margin-left: auto;
   margin-right: auto;
   width: 9ch;
-  color: #dc322f;
+  color: var(--solarized-red);
 }
 
 /* ---- codeblocks ---------------------------------------------------------- */
@@ -192,7 +232,7 @@ code {
 
 div.sourceCode,
 pre:not(.sourceCode) {
-  background: #073642;
+  background: var(--solarized-base02);
   margin: 1.35rem -2ch;
   padding: 1.35rem 2ch;
   overflow-x: auto;
@@ -200,11 +240,11 @@ pre:not(.sourceCode) {
 
 div.sourceCode ::selection,
 pre:not(.sourceCode) ::selection {
-  background: rgba(0, 43, 54, 0.99);
+  background: var(--solarized-base03-99);
 }
 
 pre code {
-  color: #839496;
+  color: var(--solarized-base0);
 }
 
 a.sourceLine {
@@ -229,32 +269,32 @@ code.sourceCode {
 
 /* https://github.com/jez/tufte-pandoc-css/blob/76e7b68630c7f681b7f6fc6acf8e670338cf43e6/pandoc-solarized.css */
 /* But with dark colors instead of light */
-code span.kw { color: #859900; font-weight: normal; font-style: normal; } /* Keyword */
-code span.dt { color: #B58900; font-weight: normal; font-style: normal; } /* DataType */
-code span.dv { color: #2AA198; font-weight: normal; font-style: normal; } /* DecVal */
-code span.bn { color: #2AA198; font-weight: normal; font-style: normal; } /* BaseN */
-code span.fl { color: #2AA198; font-weight: normal; font-style: normal; } /* Float */
-code span.ch { color: #2AA198; font-weight: normal; font-style: normal; } /* Char */
-code span.st { color: #2AA198; font-weight: normal; font-style: normal; } /* String */
-code span.co { color: #586e75; font-weight: normal; font-style: italic; } /* Comment */
-code span.ot { color: #268BD2; font-weight: normal; font-style: normal; } /* Other */
-code span.al { color: #DC322F; font-weight: normal; font-style: normal; } /* Alert */
-code span.fu { color: #268BD2; font-weight: normal; font-style: normal; } /* Function */
-code span.er { color: #DC322F; font-weight: normal; font-style: normal; } /* Error */
-code span.wa { color: #CB4B16; font-weight: normal; font-style: italic; } /* Warning */
-code span.cn { color: #2AA198; font-weight: normal; font-style: normal; } /* Constant */
-code span.sc { color: #DC322F; font-weight: normal; font-style: normal; } /* SpecialChar */
-code span.vs { color: #839496; font-weight: normal; font-style: normal; } /* VerbatimString */
-code span.ss { color: #DC322F; font-weight: normal; font-style: normal; } /* SpecialString */
-code span.im { color: #839496; font-weight: normal; font-style: normal; } /* Import */
-code span.va { color: #268BD2; font-weight: normal; font-style: normal; } /* Variable */
-code span.cf { color: #859900; font-weight: normal; font-style: normal; } /* ControlFlow */
-code span.op { color: #859900; font-weight: normal; font-style: normal; } /* Operator */
-code span.bu { color: #839496; font-weight: normal; font-style: normal; } /* BuiltIn */
-code span.ex { color: #839496; font-weight: normal; font-style: normal; } /* Extension */
-code span.pp { color: #CB4B16; font-weight: normal; font-style: normal; } /* Preprocessor */
-code span.at { color: #839496; font-weight: normal; font-style: normal; } /* Attribute */
-code span.do { color: #586e75; font-weight: normal; font-style: italic; } /* Documentation */
-code span.an { color: #586e75; font-weight: normal; font-style: italic; } /* Annotation */
-code span.cv { color: #586e75; font-weight: normal; font-style: italic; } /* CommentVar */
-code span.in { color: #586e75; font-weight: normal; font-style: italic; } /* Information */
+code span.kw { color: var(--solarized-green); font-weight: normal; font-style: normal; } /* Keyword */
+code span.dt { color: var(--solarized-yellow); font-weight: normal; font-style: normal; } /* DataType */
+code span.dv { color: var(--solarized-cyan); font-weight: normal; font-style: normal; } /* DecVal */
+code span.bn { color: var(--solarized-cyan); font-weight: normal; font-style: normal; } /* BaseN */
+code span.fl { color: var(--solarized-cyan); font-weight: normal; font-style: normal; } /* Float */
+code span.ch { color: var(--solarized-cyan); font-weight: normal; font-style: normal; } /* Char */
+code span.st { color: var(--solarized-cyan); font-weight: normal; font-style: normal; } /* String */
+code span.co { color: var(--solarized-base01); font-weight: normal; font-style: italic; } /* Comment */
+code span.ot { color: var(--solarized-blue); font-weight: normal; font-style: normal; } /* Other */
+code span.al { color: var(--solarized-red); font-weight: normal; font-style: normal; } /* Alert */
+code span.fu { color: var(--solarized-blue); font-weight: normal; font-style: normal; } /* Function */
+code span.er { color: var(--solarized-red); font-weight: normal; font-style: normal; } /* Error */
+code span.wa { color: var(--solarized-orange); font-weight: normal; font-style: italic; } /* Warning */
+code span.cn { color: var(--solarized-cyan); font-weight: normal; font-style: normal; } /* Constant */
+code span.sc { color: var(--solarized-red); font-weight: normal; font-style: normal; } /* SpecialChar */
+code span.vs { color: var(--solarized-base0); font-weight: normal; font-style: normal; } /* VerbatimString */
+code span.ss { color: var(--solarized-red); font-weight: normal; font-style: normal; } /* SpecialString */
+code span.im { color: var(--solarized-base0); font-weight: normal; font-style: normal; } /* Import */
+code span.va { color: var(--solarized-blue); font-weight: normal; font-style: normal; } /* Variable */
+code span.cf { color: var(--solarized-green); font-weight: normal; font-style: normal; } /* ControlFlow */
+code span.op { color: var(--solarized-green); font-weight: normal; font-style: normal; } /* Operator */
+code span.bu { color: var(--solarized-base0); font-weight: normal; font-style: normal; } /* BuiltIn */
+code span.ex { color: var(--solarized-base0); font-weight: normal; font-style: normal; } /* Extension */
+code span.pp { color: var(--solarized-orange); font-weight: normal; font-style: normal; } /* Preprocessor */
+code span.at { color: var(--solarized-base0); font-weight: normal; font-style: normal; } /* Attribute */
+code span.do { color: var(--solarized-base01); font-weight: normal; font-style: italic; } /* Documentation */
+code span.an { color: var(--solarized-base01); font-weight: normal; font-style: italic; } /* Annotation */
+code span.cv { color: var(--solarized-base01); font-weight: normal; font-style: italic; } /* CommentVar */
+code span.in { color: var(--solarized-base01); font-weight: normal; font-style: italic; } /* Information */
