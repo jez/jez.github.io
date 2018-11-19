@@ -15,6 +15,8 @@ the custom CSS covers all the kinds of Markdown Pandoc supports. For example,
 this text **should be bold** and this text *should be italic*. Meanwhile, this
 represents `inline code` and this represents a [hyperlink](#).
 
+You might also want to <a href="#" id="toggle-theme">toggle the colorscheme</a>.
+
 These are unicode box-drawing characters:\
 ┌───┐\
 │ × │\
