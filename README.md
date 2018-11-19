@@ -20,7 +20,7 @@ git clone -b master https://github.com/jez/jez.github.io ./site
 make
 
 # Build on file changes
-watchman-make -p 'src/**/*.md' -p 'public/**' -t all
+watchman-make -p 'src/**/*.md' 'public/**' template.html -t all
 
 # Preview the site
 cd site && python3 -m http.server &> /dev/null &
