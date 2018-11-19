@@ -9,21 +9,27 @@ This is the source branch. For the compiled output, see `master`.
 
 These setup instructions are for developing on macOS.
 
+First time setup:
+
 ```shell
 # Install the build tools
 brew bundle
 
 # Set up the site/ folder
 git clone -b master https://github.com/jez/jez.github.io ./site
+```
 
+Development commands:
+
+```
 # Build the site
-make
+make build
 
-# Build on file changes
-watchman-make -p 'src/**/*.md' 'public/**' template.html -t all
+# Build if files change
+make watch
 
-# Preview the site
-cd site && python3 -m http.server &> /dev/null &
+# Preview the site on http://0.0.0.0:8000
+make serve
 
 # Deploy
 make deploy
