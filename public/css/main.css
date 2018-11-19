@@ -216,11 +216,9 @@ hr:after {
   content: '- - - - -';
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: calc(50% - 4.5ch);
   margin-left: auto;
   margin-right: auto;
-  width: 9ch;
   color: var(--solarized-red);
 }
 
