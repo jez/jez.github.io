@@ -54,7 +54,8 @@ Here are my favorite kinds of things to work on:
 
 - [Vim plugins][topic:vim]
 
-  I'm a big fan of Vim. These are the Vim plugins and resources I've made.
+  I'm a big fan of Vim. In fact, this page is designed to look like what
+  syntax-highlighted markdown looks like when I open Vim.
 
 - [My dotfiles][topic:config]
 
