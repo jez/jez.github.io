@@ -71,7 +71,7 @@ Here are my favorite kinds of things to work on:
 [topic:cli]: https://github.com/search?q=user%3Ajez+fork%3Atrue+topic%3Acli&type=Repositories
 [topic:writing]: https://github.com/search?p=1&q=user%3Ajez+fork%3Atrue+topic%3Awriting&type=Repositories
 [topic:config]: https://github.com/search?q=user%3Ajez+fork%3Atrue+topic%3Aconfig&type=Repositories
-[topic:plt]: https://github.com/search?q=user%3Ajez+fork%3Atrue+topic%3Aplt&type=Repositories
+[topic:plt]: https://github.com/search?q=user%3Ajez+fork%3Atrue+topic%3Aplt&type=Repositories&o=desc&s=updated
 
 
 ## Writing
