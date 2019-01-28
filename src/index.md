@@ -83,7 +83,7 @@ Here are my favorite kinds of things to work on:
 I keep my writings in two places:\
 
 - [blog.jez.io] for technical posts
-- [jez.io/thoughts/] for non-technical musings musings
+- [jez.io/thoughts/] for non-technical musings
 
 Recently, I've been writing about types and about programming.\
 Some selected articles:
