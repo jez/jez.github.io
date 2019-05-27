@@ -85,7 +85,10 @@ I keep my writings in two places:\
 - [blog.jez.io] for technical posts
 - [jez.io/thoughts/] for non-technical musings
 
-Recently, I've been writing about types and about programming.\
+Recently, I've been writing about [Haskell][blog-haskell], [types][blog-types],
+[programming][blog-programming], and [Vim][blog-vim] (among others) if you
+prefer to browse by topic.
+
 Some selected articles:
 
 - [Code Review from the Command Line]
@@ -97,6 +100,11 @@ Some selected articles:
 
   Union types are powerful yet often overlooked. This post explores some of the
   tradeoffs in the way Flow implements union types versus ReasonML.
+
+- [Profiling in Haskell for a 10x Speedup]
+
+  I wanted to learn how to make Haskell code faster, so I solved a toy problem
+  with a naive algorithm, and then profiled away the slow parts.
 
 - [Variables and Binding]
 
@@ -111,11 +119,14 @@ Some selected articles:
 [blog.jez.io]: https://blog.jez.io
 [jez.io/thoughts/]: https://jez.io/thoughts/
 
-[about types]: https://blog.jez.io/categories/#types
-[about programming]: https://blog.jez.io/categories/#programming
+[blog-haskell]: https://blog.jez.io/categories/#haskell
+[blog-types]: https://blog.jez.io/categories/#types
+[blog-programming]: https://blog.jez.io/categories/#programming
+[blog-vim]: https://blog.jez.io/categories/#vim
 
 [Code Review from the Command Line]: https://blog.jez.io/cli-code-review/
 [Union Types in Flow & Reason]: https://blog.jez.io/union-types-flow-reason/
+[Profiling in Haskell for a 10x Speedup]: https://blog.jez.io/profiling-in-haskell/
 [Variables and Binding]: https://blog.jez.io/variables-and-binding/
 [on-leaving-facebook]: https://jez.io/thoughts/on-leaving-facebook/
 
