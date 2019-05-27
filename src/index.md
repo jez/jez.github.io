@@ -153,14 +153,14 @@ opportunities if you're:
 
 I've been lucky enough to work at a number of great companines:
 
-- [Stripe] - [Ruby Type Checker]
+- [Stripe] - [Sorbet]
 
   > Aug 2018 - ···
 
-  I'm currently working on a static type checker for Ruby, including developing
-  features and rolling it out to Stripe's codebase. Stripe has millons of lines
-  of Ruby and hundreds of developers, so we see adding types to Ruby as a key
-  way to improve developer productivity.
+  I'm currently working on a static type checker for Ruby called Sorbet,
+  developing new language features and rolling it out to Stripe's codebase.
+  Stripe has millons of lines of Ruby and hundreds of developers, so we see
+  adding types to Ruby as a key way to improve developer productivity.
 
 - [Stripe] - [Stripe Elements]
 
@@ -194,7 +194,7 @@ I've been lucky enough to work at a number of great companines:
   tool in C++ that enabled developers to prototype and test their apps.
 
 [Stripe]: https://stripe.com/
-[Ruby Type Checker]: https://sorbet.run/talks/RubyKaigi2018/#/
+[Sorbet]: https://sorbet.org
 [Stripe Elements]: https://stripe.com/elements
 [Stripe Checkout]: https://stripe.com/checkout
 [Dropbox]: https://www.dropbox.com
