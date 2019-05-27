@@ -35,3 +35,7 @@ public:
 site/%.html: src/%.md
 	mkdir -p "$$(dirname "$@")"
 	pandoc -t html5 --template template.html "$<" -o "$@"
+
+# favicon.ico name is special, so we can only choose one.
+public/favicon.ico: public/img/favicon-dark.png public/img/favicon-dark@2x.png
+	convert $^ $@
