@@ -33,6 +33,11 @@ make serve
 
 # Deploy
 make deploy
+
+# Favicon sources are in Sketch.
+# Export from Sketch into public/img/ to update.
+# To update generated ICO file:
+make public/favicon.ico
 ```
 
 ## License
