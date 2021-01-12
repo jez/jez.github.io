@@ -16,8 +16,8 @@ Hey there! Here are some links you might be interested in:
 - my [blog](http://blog.jez.io)
 - my [resume](/resume/)
 
-If you want to contact me, I prefer [email](mailto:jake@zimmerman.io), [Keybase
-Chat](https://keybase.io/jez_), or [text message][on-leaving-facebook].
+If you want to contact me, I prefer [email](mailto:jake@zimmerman.io),
+[iMessage (or SMS)][on-leaving-facebook], or [Signal][on-leaving-facebook].
 
 You might also want to <a href="#" id="toggle-theme">toggle the colorscheme</a>.
 
