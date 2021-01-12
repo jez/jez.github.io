@@ -30,7 +30,7 @@ rm-r:
 
 .PHONY: public
 public:
-	cp -rv public/* site
+	cp -rv public/* public/.nojekyll site
 
 site/%.html: src/%.md
 	mkdir -p "$$(dirname "$@")"
