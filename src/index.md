@@ -151,16 +151,39 @@ opportunities if you're:
 2.  based in Pittsburgh, or
 3.  developing programming language-related tools.
 
-I've been lucky enough to work at a number of great companines:
+I've been lucky enough to work at a number of great companies:
 
 - [Stripe] - [Sorbet]
 
-  > Aug 2018 - ···
+  > Jan 2022 - ···
 
-  I'm currently working on a static type checker for Ruby called Sorbet,
-  developing new language features and rolling it out to Stripe's codebase.
-  Stripe has millons of lines of Ruby and hundreds of developers, so we see
-  adding types to Ruby as a key way to improve developer productivity.
+  I'm once again working mainly on Sorbet (the type checker, not the compiler).
+  My current focus is improving Sorbet's performance on large codebases and the
+  experience of using Sorbet within an editor. This involves moving from batch
+  processing to a more incremental architecture, building a parser that's more
+  tolerant of syntax errors, and building new language-aware, IDE-like features
+  into Sorbet.
+
+- [Stripe] - [Sorbet Compiler]
+
+  > Jan 2020 - Dec 2021
+
+  I spent two years building the Sorbet Compiler, an experimental
+  ahead-of-time compiler translating Ruby source code to machine code. The
+  architecture of the compiler essentially used Sorbet as the compiler frontend,
+  LLVM as the compiler backend, and the Ruby VM and it's C extension APIs as a
+  language runtime. The Sorbet Compiler's main goal is improving latency on
+  Stripe's live API traffic.
+
+- [Stripe] - [Sorbet]
+
+  > Aug 2018 - Dec 2019
+
+  Starting in my second year at Stripe, I joined the team building Sorbet, a
+  static type checker for Ruby. I developed new type system features for it, and
+  ran large-scale code migrations to drive adoption of Sorbet in Stripe's
+  codebase. Stripe has millions of lines of Ruby and hundreds of developers, so
+  we see adding types to Ruby as a key way to improve developer productivity.
 
 - [Stripe] - [Stripe Elements]
 
@@ -195,6 +218,7 @@ I've been lucky enough to work at a number of great companines:
 
 [Stripe]: https://stripe.com/
 [Sorbet]: https://sorbet.org
+[Sorbet Compiler]: https://www.youtube.com/watch?v=BH8S1htcHXY
 [Stripe Elements]: https://stripe.com/elements
 [Stripe Checkout]: https://stripe.com/checkout
 [Dropbox]: https://www.dropbox.com
