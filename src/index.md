@@ -144,12 +144,9 @@ I mostly prefer writing, but from time to time I give talks.
 >
 > Andrew Carnegie
 
-I'm currently very satisfied with my work, but am still interested to hear about
-opportunities if you're:
-
-1.  using Haskell, OCaml, or related languages,
-2.  based in Pittsburgh, or
-3.  developing programming language-related tools.
+I'm currently very satisfied with my work! But if you work on programming
+languages or language-aware IDE tooling I'm always willing to chat. (At the very
+least, it's always fun to swap notes on unique approaches to common problems.)
 
 I've been lucky enough to work at a number of great companies:
 
