@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>No DMs, please</title>
+  <meta name="description" content="Please avoid sending me DMs to ask
+me questions." />
+  <link rel="apple-touch-icon-precomposed" href="/img/touch-icon-dark.png">
+  <link rel="icon" sizes="32x32" href="/img/favicon-dark@2x.png">
+  <link rel="icon" sizes="16x16" href="/img/favicon-dark.png">
+  <link rel="canonical" href="https://jez.io/no-dms/">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<main>
+<h1>No DMs, please</h1>
+<p><br />
+<br />
+</p>
+<p>Please avoid sending me direct messages (DMs) to ask me questions.
+(Especially technical questions.)</p>
+<p><br />
+<br />
+</p>
+<p>If you can ask me a question in a public space, please ask it
+there.<br />
+If you can’t or aren’t sure whether you can ask it in public, feel free
+to DM me (but know that my first response might be to request that you
+re-ask it in a public space).</p>
+<p>Some suggestions for public spaces to ask questions in include:</p>
+<ul>
+<li>the <code>#discuss</code> channel on the <a
+href="https://sorbet.org/slack">Sorbet Slack</a> or the <a
+href="https://twitter.com/sorbet_ruby">Sorbet Twitter</a> account (for
+Sorbet-related questions),</li>
+<li>GitHub Issues and GitHub Discussions where available</li>
+<li>Public work channels (if you and I are co-workers)</li>
+</ul>
+<p>Whatever you do, <strong>do not</strong> let the first message be
+merely “Hello” or “👋” because that will ding me immediately, and then
+I’ll impatiently await the actual question while watching a “user is
+typing” indicator.</p>
+<h2 id="why">Why?</h2>
+<p>Questions are excellent moments to teach and share knowledge. When
+asked in public spaces, a couple good things happen:</p>
+<ul>
+<li><p>Other people get to <strong>see the question</strong>.</p>
+<p>Sometimes other people learn more simply from seeing the questions
+other people are asking. Seeing other peoples’ questions helps them
+expand their horizons into new territories.</p></li>
+<li><p>Other people get to <strong>see the answer</strong>.</p>
+<p>Chances are, you’re neither the first nor the last person to ask me
+your question. By asking it in the open, it makes it easier for other
+people to find answers to their questions in the future.</p></li>
+<li><p><strong>My teammates</strong> get a chance to learn from my
+answers.</p>
+<p>Part of my job is to help those around me grow. One way I can do this
+is by sharing my knowledge with them. When they get to see how I answer
+questions, it helps share my knowledge with my teammates and equip them
+to help answer similar questions in the future.</p></li>
+<li><p>You <strong>get answers faster</strong> in expectation.</p>
+<p>I check all notifications at the same speed. Whether you send me a DM
+or mention me in a Slack channel, I’ll respond to those notifications at
+the same speed. For example, if I’m on vacation, I’ll have <em>all</em>
+notifications paused, and you may not hear back from me for days or
+weeks. Asking the question in public increases your odds that someone
+else who can answer your question sees it quickly.</p></li>
+</ul>
+<h2 id="exceptions">Exceptions</h2>
+<p>Of course, feel free to send me DMs for situations like these:</p>
+<ul>
+<li><p>If you have something personal or confidential to say. This
+includes if you have individual feedback to give to me. (Thanks in
+advance for your feedback.)</p></li>
+<li><p>You’re not comfortable asking a question in a public space. (If
+this is the case, please say so, otherwise my first response will likely
+be to request that you re-ask your question in public.)</p></li>
+<li><p>If you don’t know of a good public space to ask it. For example,
+the <a href="https://sorbet.org/slack">Sorbet Slack</a> is a good place
+to ask me Sorbet questions, but is not a good place to ask me questions
+about other projects. In these cases feel free to contact me directly
+(but know that if there is a good public forum to ask the question, I
+may redirect you there first before answering).</p></li>
+<li><p>To share jokes or memes 😉 (especially those that you think might
+be misinterpreted if shared with an overly-wide audience).</p></li>
+</ul>
+<p><br />
+<br />
+</p>
+<p><a href="/">← Return home</a></p>
+<hr />
+</main>
+<script>
+const setFaviconLight = () => {
+  document.querySelector('link[rel="apple-touch-icon-precomposed"]').href = '/img/touch-icon-light.png'
+  document.querySelector('link[rel="icon"][sizes="32x32"]').href = '/img/favicon-light@2x.png'
+  document.querySelector('link[rel="icon"][sizes="16x16"]').href = '/img/favicon-light.png'
+}
+
+const setFaviconDark = () => {
+  document.querySelector('link[rel="apple-touch-icon-precomposed"]').href = '/img/touch-icon-dark.png'
+  document.querySelector('link[rel="icon"][sizes="32x32"]').href = '/img/favicon-dark@2x.png'
+  document.querySelector('link[rel="icon"][sizes="16x16"]').href = '/img/favicon-dark.png'
+}
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    setFaviconLight();
+}
+
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
+  if (event.matches) {
+    setFaviconLight();
+  } else {
+    setFaviconDark()
+  }
+});
+</script>
+</body>
+</html>

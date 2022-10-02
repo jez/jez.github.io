@@ -5,11 +5,12 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Testing</title>
-  <meta name="description" content="Don’t mind me! This is just for testing." />
+  <meta name="description" content="Don’t mind me! This is just for
+testing." />
   <link rel="apple-touch-icon-precomposed" href="/img/touch-icon-dark.png">
   <link rel="icon" sizes="32x32" href="/img/favicon-dark@2x.png">
   <link rel="icon" sizes="16x16" href="/img/favicon-dark.png">
-  <link rel="canonical" href="https://jez.io">
+  <link rel="canonical" href="https://jez.io/testing/">
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -20,17 +21,32 @@
 </head>
 <body>
 <main>
+<h1>Testing</h1>
 <h1 id="header-1">Header 1</h1>
-<p>This is a test page designed to be used during development, to make sure that the custom CSS covers all the kinds of Markdown Pandoc supports. For example, this text <strong>should be bold</strong> and this text <em>should be italic</em>. Meanwhile, this represents <code>inline code</code> and this represents a <a href="#">hyperlink</a>.</p>
-<p>You might also want to <a href="#" id="toggle-theme">toggle the colorscheme</a>.</p>
+<p>This is a test page designed to be used during development, to make
+sure that the custom CSS covers all the kinds of Markdown Pandoc
+supports. For example, this text <strong>should be bold</strong> and
+this text <em>should be italic</em>. Meanwhile, this represents
+<code>inline code</code> and this represents a <a
+href="#">hyperlink</a>.</p>
 <p>These are unicode box-drawing characters:<br />
 ┌───┐<br />
 │ × │<br />
 └───┘<br />
 Do they overlap? Are there gaps?</p>
-<p>This is a test page designed to be used during development, to make sure that the custom CSS covers all the kinds of Markdown Pandoc supports. For example, this text <strong>should be bold</strong> and this text <em>should be italic</em>. Meanwhile, this represents <code>inline code</code> and this represents a <a href="#">hyperlink</a>.</p>
+<p>This is a test page designed to be used during development, to make
+sure that the custom CSS covers all the kinds of Markdown Pandoc
+supports. For example, this text <strong>should be bold</strong> and
+this text <em>should be italic</em>. Meanwhile, this represents
+<code>inline code</code> and this represents a <a
+href="#">hyperlink</a>.</p>
 <blockquote>
-<p>This is a test page designed to be used during development, to make sure that the custom CSS covers all the kinds of Markdown Pandoc supports. For example, this text <strong>should be bold</strong> and this text <em>should be italic</em>. Meanwhile, this represents <code>inline code</code> and this represents a <a href="#">hyperlink</a>.</p>
+<p>This is a test page designed to be used during development, to make
+sure that the custom CSS covers all the kinds of Markdown Pandoc
+supports. For example, this text <strong>should be bold</strong> and
+this text <em>should be italic</em>. Meanwhile, this represents
+<code>inline code</code> and this represents a <a
+href="#">hyperlink</a>.</p>
 </blockquote>
 <h2 id="header-2">Header 2</h2>
 <ul>
@@ -74,7 +90,8 @@ Do they overlap? Are there gaps?</p>
 </ul></li>
 </ol>
 <h3 id="header-3">Header 3</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">class</span> A</span>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">class</span> A</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">def</span> foo; <span class="cf">end</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -91,15 +108,6 @@ Do they overlap? Are there gaps?</p>
 <p>How do emoji render? 🤔 👌 🚀</p>
 </main>
 <script>
-const useLightTheme = () => {
-  const stored = window.localStorage.getItem('useLightTheme');
-  if (stored == null) {
-    return false;
-  } else {
-    return JSON.parse(stored);
-  }
-}
-
 const setFaviconLight = () => {
   document.querySelector('link[rel="apple-touch-icon-precomposed"]').href = '/img/touch-icon-light.png'
   document.querySelector('link[rel="icon"][sizes="32x32"]').href = '/img/favicon-light@2x.png'
@@ -112,21 +120,15 @@ const setFaviconDark = () => {
   document.querySelector('link[rel="icon"][sizes="16x16"]').href = '/img/favicon-dark.png'
 }
 
-// First load
-if (useLightTheme()) {
-  document.querySelector('html').classList.toggle('solarized-light');
-  setFaviconLight();
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    setFaviconLight();
 }
 
-document.getElementById('toggle-theme').addEventListener('click', (ev) => {
-  ev.preventDefault();
-  const current = useLightTheme();
-  window.localStorage.setItem('useLightTheme', !current);
-  document.querySelector('html').classList.toggle('solarized-light');
-  if (current) {
-    setFaviconDark();
-  } else {
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
+  if (event.matches) {
     setFaviconLight();
+  } else {
+    setFaviconDark()
   }
 });
 </script>

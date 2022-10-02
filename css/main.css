@@ -2,7 +2,7 @@
 /* TODO(jez) Support pandoc tables */
 /* TODO(jez) Support pandoc footnotes */
 
-html {
+:root {
   --solarized-base03:    #002b36;
   --solarized-base02:    #073642;
   --solarized-base01:    #586e75;
@@ -24,18 +24,20 @@ html {
   --solarized-base02-99: rgba(7, 54, 66, 0.99);
 }
 
-html.solarized-light {
-  --solarized-base03:    #fdf6e3;
-  --solarized-base02:    #eee8d5;
-  --solarized-base01:    #93a1a1;
-  --solarized-base00:    #839496;
-  --solarized-base0:     #657b83;
-  --solarized-base1:     #586e75;
-  --solarized-base2:     #073642;
-  --solarized-base3:     #002b36;
+@media (prefers-color-scheme: light) {
+  :root {
+    --solarized-base03:    #fdf6e3;
+    --solarized-base02:    #eee8d5;
+    --solarized-base01:    #93a1a1;
+    --solarized-base00:    #839496;
+    --solarized-base0:     #657b83;
+    --solarized-base1:     #586e75;
+    --solarized-base2:     #073642;
+    --solarized-base3:     #002b36;
 
-  --solarized-base03-99: rgba(253, 246, 227, 0.99);
-  --solarized-base02-99: rgba(238, 232, 213, 0.99);
+    --solarized-base03-99: rgba(253, 246, 227, 0.99);
+    --solarized-base02-99: rgba(238, 232, 213, 0.99);
+  }
 }
 
 *,
@@ -135,10 +137,10 @@ a {
 a:hover {
   color: var(--solarized-violet);
 }
-a:not(.sourceLine)::before {
+a:not([href^="#cb"])::before {
   content: '[';
 }
-a:not(.sourceLine)::after {
+a:not([href^="#cb"])::after {
   content: ']';
 }
 a:hover::before,
