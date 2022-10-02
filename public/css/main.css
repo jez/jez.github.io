@@ -137,10 +137,10 @@ a {
 a:hover {
   color: var(--solarized-violet);
 }
-a:not(.sourceLine)::before {
+a:not([href^="#cb"])::before {
   content: '[';
 }
-a:not(.sourceLine)::after {
+a:not([href^="#cb"])::after {
   content: ']';
 }
 a:hover::before,
