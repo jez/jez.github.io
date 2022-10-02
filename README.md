@@ -21,7 +21,7 @@ git clone -b master https://github.com/jez/jez.github.io ./site
 
 Development commands:
 
-```
+```bash
 # Build the site
 make build
 
