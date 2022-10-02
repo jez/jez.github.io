@@ -8,8 +8,6 @@ include-before: []
 include-after: []
 ---
 
-# Jake Zimmerman
-
 Hey there! Here are some links you might be interested in:
 
 - my [GitHub profile](https://github.com/jez)
@@ -18,8 +16,6 @@ Hey there! Here are some links you might be interested in:
 
 If you want to contact me, I prefer [email](mailto:jake@zimmerman.io),
 [iMessage (or SMS)][on-leaving-facebook], or [Signal][on-leaving-facebook].
-
-You might also want to <a href="#" id="toggle-theme">toggle the colorscheme</a>.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->

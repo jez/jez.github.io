@@ -3,6 +3,7 @@ title: Testing
 description: Don't mind me! This is just for testing.
 css:
   - /css/main.css
+canonical: https://jez.io/testing/
 header-includes: []
 include-before: []
 include-after: []
@@ -14,8 +15,6 @@ This is a test page designed to be used during development, to make sure that
 the custom CSS covers all the kinds of Markdown Pandoc supports. For example,
 this text **should be bold** and this text *should be italic*. Meanwhile, this
 represents `inline code` and this represents a [hyperlink](#).
-
-You might also want to <a href="#" id="toggle-theme">toggle the colorscheme</a>.
 
 These are unicode box-drawing characters:\
 ┌───┐\

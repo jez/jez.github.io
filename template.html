@@ -10,7 +10,11 @@ $if(description)$
   <link rel="apple-touch-icon-precomposed" href="/img/touch-icon-dark.png">
   <link rel="icon" sizes="32x32" href="/img/favicon-dark@2x.png">
   <link rel="icon" sizes="16x16" href="/img/favicon-dark.png">
+$if(canonical)$
+  <link rel="canonical" href="$canonical$">
+$else$
   <link rel="canonical" href="https://jez.io">
+$endif$
 $endif$
   <style type="text/css">
       code{white-space: pre-wrap;}
@@ -36,21 +40,18 @@ $for(include-before)$
 $include-before$
 $endfor$
 <main>
+<h1>$title$</h1>
+$if(toc)$
+<nav id="$idprefix$TOC" role="doc-toc">
+$table-of-contents$
+</nav>
+$endif$
 $body$
 </main>
 $for(include-after)$
 $include-after$
 $endfor$
 <script>
-const useLightTheme = () => {
-  const stored = window.localStorage.getItem('useLightTheme');
-  if (stored == null) {
-    return false;
-  } else {
-    return JSON.parse(stored);
-  }
-}
-
 const setFaviconLight = () => {
   document.querySelector('link[rel="apple-touch-icon-precomposed"]').href = '/img/touch-icon-light.png'
   document.querySelector('link[rel="icon"][sizes="32x32"]').href = '/img/favicon-light@2x.png'
@@ -63,21 +64,15 @@ const setFaviconDark = () => {
   document.querySelector('link[rel="icon"][sizes="16x16"]').href = '/img/favicon-dark.png'
 }
 
-// First load
-if (useLightTheme()) {
-  document.querySelector('html').classList.toggle('solarized-light');
-  setFaviconLight();
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    setFaviconLight();
 }
 
-document.getElementById('toggle-theme').addEventListener('click', (ev) => {
-  ev.preventDefault();
-  const current = useLightTheme();
-  window.localStorage.setItem('useLightTheme', !current);
-  document.querySelector('html').classList.toggle('solarized-light');
-  if (current) {
-    setFaviconDark();
-  } else {
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
+  if (event.matches) {
     setFaviconLight();
+  } else {
+    setFaviconDark()
   }
 });
 </script>
