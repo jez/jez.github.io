@@ -14,8 +14,11 @@ Hey there! Here are some links you might be interested in:
 - my [blog](http://blog.jez.io)
 - my [resume](/resume/)
 
-If you want to contact me, I prefer [email](mailto:jake@zimmerman.io),
-[iMessage (or SMS)][on-leaving-facebook], or [Signal][on-leaving-facebook].
+If you want to contact me, I prefer [email](mailto:jake@zimmerman.io) or,
+[Signal][on-leaving-facebook]. I infrequently check
+[Twitter](https://twitter.com/jez_io) and
+[Mastodon](https://hachyderm.io/@jez_io).\
+However, please [avoid DM'ing me](/no-dms/) to ask questions about Sorbet.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
