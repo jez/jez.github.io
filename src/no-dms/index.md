@@ -30,6 +30,10 @@ Some suggestions for public spaces to ask questions in include:
 - GitHub Issues and GitHub Discussions where available
 - Public work channels (if you and I are co-workers)
 
+The **exception**: if you have questions for me relating to my employer, or are
+curious to know whether I'm open to new roles elsewhere, please **do** email or
+DM me, as I do not prefer answering these questions in public.
+
 Whatever you do, **do not** let the first message be merely "Hello" or "👋"
 because that will ding me immediately, and then I'll impatiently await the
 actual question while watching a "user is typing" indicator.
