@@ -30,6 +30,7 @@ rm-r:
 
 .PHONY: public
 public:
+	mkdir -p site
 	cp -rv public/* public/.nojekyll site
 
 site/%.html: src/%.md
