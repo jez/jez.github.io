@@ -27,6 +27,9 @@ const onLoad = () => {
     if (linkTag == null) {
       const newLink = document.createElement("link");
       newLink.rel = rel;
+      if (sizes) {
+        newLink.sizes = sizes;
+      }
       document.head.appendChild(newLink);
     }
   });
