@@ -105,30 +105,7 @@ be misinterpreted if shared with an overly-wide audience).</p></li>
 <p><a href="/">← Return home</a></p>
 <hr />
 </main>
-<script>
-const setFaviconLight = () => {
-  document.querySelector('link[rel="apple-touch-icon-precomposed"]').href = '/img/touch-icon-light.png'
-  document.querySelector('link[rel="icon"][sizes="32x32"]').href = '/img/favicon-light@2x.png'
-  document.querySelector('link[rel="icon"][sizes="16x16"]').href = '/img/favicon-light.png'
-}
-
-const setFaviconDark = () => {
-  document.querySelector('link[rel="apple-touch-icon-precomposed"]').href = '/img/touch-icon-dark.png'
-  document.querySelector('link[rel="icon"][sizes="32x32"]').href = '/img/favicon-dark@2x.png'
-  document.querySelector('link[rel="icon"][sizes="16x16"]').href = '/img/favicon-dark.png'
-}
-
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    setFaviconLight();
-}
-
-window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
-  if (event.matches) {
-    setFaviconLight();
-  } else {
-    setFaviconDark()
-  }
-});
+<script src="/js/favicon.js">
 </script>
 </body>
 </html>
