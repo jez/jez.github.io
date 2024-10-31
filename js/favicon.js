@@ -26,7 +26,7 @@ const onLoad = () => {
     const linkTag = document.querySelector(querySelector);
     if (linkTag == null) {
       const newLink = document.createElement("link");
-      newlink.rel = rel;
+      newLink.rel = rel;
       document.head.appendChild(newLink);
     }
   });
